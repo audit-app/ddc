@@ -6,7 +6,7 @@ const categories = [
     name: "Anuncios Destacados",
     description:
       "Publica tu anuncio con visibilidad premium. Incluye fotos, descripción y tu contacto directo de forma segura y discreta.",
-    image: "/sophisticated-adults-meeting.jpg",
+    image: "https://bo.skokka.com/static/assets/womenseekmen_repr.09bc5c7b4ed7201892f6.jpg",
     items: [
       { type: "Publicar", location: "Contacto directo" },
       { type: "Destacar", location: "Mayor visibilidad" },
@@ -55,7 +55,7 @@ export default function CategoryCards() {
       <div className="max-w-6xl mx-auto px-4">
         <div className="mb-12">
           <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent dark:from-primary dark:to-secondary dark:text-transparent mb-3 text-balance">
-            Cómo Funciona Nuestro Tablón
+          Encuentros calientes en tu ciudad
           </h2>
           <p className="text-lg text-muted-foreground">Publica, busca y conecta de forma segura y discreta</p>
         </div>

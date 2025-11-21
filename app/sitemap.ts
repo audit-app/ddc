@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next"
 import { anunciosData } from "@/lib/anuncios-data"
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://skokka.com"
+  const baseUrl = "https://damasdecompañia.com"
 
   // Main pages
   const mainPages: MetadataRoute.Sitemap = [

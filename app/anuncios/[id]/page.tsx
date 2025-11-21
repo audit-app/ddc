@@ -2,9 +2,10 @@ import type { Metadata } from "next"
 import { anunciosData } from "@/lib/anuncios-data"
 import AnuncioDetailClient from "./anuncio-detail-client"
 
-export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
-  const anuncio = anunciosData[Number.parseInt(params.id)]
-
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
+  const { id } = await params
+  const anuncio = anunciosData[Number.parseInt(id)]
+  console.log("Generating metadata for anuncio ID:", id, anuncio)
   if (!anuncio) {
     return {
       title: "Anuncio no encontrado",
@@ -45,13 +46,14 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
       images: [imageUrl],
     },
     alternates: {
-      canonical: `https://skokka.com/anuncios/${params.id}`,
+      canonical: `https://skokka.com/anuncios/${id}`,
     },
   }
 }
 
-export default function AnuncioDetailPage({ params }: { params: { id: string } }) {
-  const anuncio = anunciosData[Number.parseInt(params.id)]
+export default async function AnuncioDetailPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params
+  const anuncio = anunciosData[Number.parseInt(id)]
 
   if (!anuncio) {
     return (
@@ -66,5 +68,5 @@ export default function AnuncioDetailPage({ params }: { params: { id: string } }
     )
   }
 
-  return <AnuncioDetailClient anuncio={anuncio} anuncioId={params.id} />
+  return <AnuncioDetailClient anuncio={anuncio} anuncioId={id} />
 }

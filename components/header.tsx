@@ -13,7 +13,7 @@ export default function Header() {
               <span className="text-primary-foreground font-bold text-sm">📋</span>
             </div>
             <span className="text-xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent dark:from-primary dark:to-secondary dark:text-transparent">
-              Tablón Discreto
+              Damas de Compañia
             </span>
           </div>
 
