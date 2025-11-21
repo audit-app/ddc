@@ -63,21 +63,67 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$anuncios$2f$anuncios$
 ;
 ;
 const metadata = {
-    title: "Todos los Anuncios | Tablón de Anuncios para Adultos",
-    description: "Explora todos los anuncios clasificados de nuestra plataforma. Busca por ciudad, categoría y encuentra exactamente lo que necesitas.",
-    keywords: "anuncios, clasificados, buscar anuncios, encuentros, contacto directo",
+    title: "Anuncios Clasificados Bolivia | Escorts, Masajes y Acompañantes",
+    description: "Encuentra anuncios clasificados para adultos en Bolivia. Escorts verificadas, masajes, acompañantes en La Paz, Santa Cruz, Cochabamba. Contacto directo por WhatsApp.",
+    keywords: [
+        "anuncios clasificados bolivia",
+        "escorts bolivia",
+        "acompañantes la paz",
+        "masajes santa cruz",
+        "escorts cochabamba",
+        "clasificados adultos",
+        "encuentros discretos bolivia",
+        "contacto whatsapp escorts"
+    ].join(", "),
     openGraph: {
-        title: "Todos los Anuncios | Tablón de Anuncios",
-        description: "Explora todos los anuncios clasificados de nuestra plataforma.",
-        type: "website"
+        title: "Anuncios Clasificados Bolivia | Escorts y Acompañantes",
+        description: "Explora anuncios verificados de escorts y acompañantes en Bolivia. La Paz, Santa Cruz, Cochabamba y más ciudades.",
+        type: "website",
+        locale: "es_BO",
+        siteName: "Clasificados Bolivia"
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Anuncios Clasificados Bolivia",
+        description: "Encuentra escorts y acompañantes verificadas en Bolivia"
+    },
+    robots: {
+        index: true,
+        follow: true
+    },
+    alternates: {
+        canonical: "/anuncios"
     }
 };
+// JSON-LD Structured Data
+const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Anuncios Clasificados Bolivia",
+    description: "Listado de anuncios clasificados para adultos en Bolivia",
+    itemListOrder: "https://schema.org/ItemListOrderDescending",
+    numberOfItems: "500+"
+};
 function AnunciosPage() {
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$anuncios$2f$anuncios$2d$client$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
-        fileName: "[project]/app/anuncios/page.tsx",
-        lineNumber: 17,
-        columnNumber: 10
-    }, this);
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Fragment"], {
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("script", {
+                type: "application/ld+json",
+                dangerouslySetInnerHTML: {
+                    __html: JSON.stringify(jsonLd)
+                }
+            }, void 0, false, {
+                fileName: "[project]/app/anuncios/page.tsx",
+                lineNumber: 53,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$anuncios$2f$anuncios$2d$client$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
+                fileName: "[project]/app/anuncios/page.tsx",
+                lineNumber: 57,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true);
 }
 }),
 "[project]/app/anuncios/page.tsx [app-rsc] (ecmascript, Next.js Server Component)", ((__turbopack_context__) => {

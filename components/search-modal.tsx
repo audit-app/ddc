@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { X, Search, ChevronDown } from "lucide-react"
+import { X, Search, ChevronDown, Sparkles, MapPin, SlidersHorizontal } from "lucide-react"
 import { Dialog, DialogContent } from "@/components/ui/dialog"
 
 interface SearchModalProps {
@@ -10,42 +10,41 @@ interface SearchModalProps {
 }
 
 export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
-  const [selectedCategory, setSelectedCategory] = useState("Escorts")
+  const [selectedCategory, setSelectedCategory] = useState("Mujeres")
   const [selectedCity, setSelectedCity] = useState("Todas las ciudades")
   const [searchText, setSearchText] = useState("")
   const [expandedFilter, setExpandedFilter] = useState<string | null>(null)
   const [selectedFilters, setSelectedFilters] = useState<Record<string, string[]>>({})
 
+  const categories = ["Mujeres", "Trans", "Hombres", "Parejas", "Masajes"]
+  const cities = ["Todas las ciudades", "La Paz", "Santa Cruz", "Cochabamba", "El Alto", "Oruro", "Sucre", "Potosí"]
+
   const filters = [
     {
       id: "etnia",
       label: "Etnia",
-      icon: "👤",
-      options: ["Africana", "India", "Asiática", "Árabe", "Latina", "Caucásica", "Bolivianas"],
+      options: ["Latina", "Caucásica", "Boliviana", "Asiática", "Africana", "Árabe", "India"],
     },
     {
       id: "nacionalidad",
       label: "Nacionalidad",
-      icon: "🚩",
-      options: ["Bo Boliviana", "Py Paraguay", "Br Brasileña", "Co Colombiana", "Ar Argentina"],
+      options: ["Boliviana", "Argentina", "Brasileña", "Colombiana", "Paraguaya", "Venezolana"],
     },
     {
-      id: "pechos",
-      label: "Pechos",
-      icon: "🎀",
-      options: ["Natural", "Silicona", "Grande", "Pequeño", "Medio"],
+      id: "edad",
+      label: "Edad",
+      options: ["18-25", "26-30", "31-35", "36-40", "40+"],
     },
     {
-      id: "cabello",
-      label: "Cabello",
-      icon: "💇",
-      options: ["Largo", "Corto", "Rubio", "Negro", "Castaño", "Rizado", "Liso"],
+      id: "servicios",
+      label: "Servicios",
+      options: ["Masajes", "Acompañante", "Eventos", "Viajes", "Cena"],
     },
   ]
 
   const handleClearAll = () => {
     setSearchText("")
-    setSelectedCategory("Escorts")
+    setSelectedCategory("Mujeres")
     setSelectedCity("Todas las ciudades")
     setExpandedFilter(null)
     setSelectedFilters({})
@@ -65,135 +64,207 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-2xl w-full p-0 bg-white border-0 shadow-2xl rounded-lg">
+      <DialogContent
+        showCloseButton={false}
+        className="!max-w-4xl sm:!max-w-4xl w-[95vw] p-0 bg-card/95 backdrop-blur-2xl border border-white/10 shadow-2xl shadow-primary/10 rounded-3xl overflow-hidden"
+      >
         {/* Header */}
-        <div className="flex items-center justify-between p-6 border-b border-gray-200">
-          <div className="flex items-center gap-3">
-            <Search className="w-6 h-6 text-gray-900" />
-            <h2 className="text-2xl font-bold text-gray-900">Buscar</h2>
+        <div className="relative flex items-center justify-between p-6 border-b border-white/10">
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-transparent to-secondary/10" />
+          <div className="relative flex items-center gap-3">
+            <div className="p-2.5 bg-gradient-to-br from-primary/20 to-secondary/20 backdrop-blur-xl rounded-xl border border-white/20">
+              <Search className="w-5 h-5 text-primary" />
+            </div>
+            <div>
+              <h2 className="text-xl font-bold text-foreground">Búsqueda avanzada</h2>
+              <p className="text-xs text-muted-foreground">Encuentra exactamente lo que buscas</p>
+            </div>
           </div>
           <button
             onClick={onClose}
-            className="p-1 hover:bg-gray-100 rounded-lg transition text-gray-600 hover:text-gray-900"
+            className="relative p-2 hover:bg-white/10 rounded-xl transition-all duration-300 text-muted-foreground hover:text-foreground group"
           >
-            <X className="w-6 h-6" />
+            <X className="w-5 h-5 group-hover:rotate-90 transition-transform duration-300" />
           </button>
         </div>
 
         {/* Content */}
-        <div className="p-6 space-y-5 max-h-[70vh] overflow-y-auto">
-          {/* Category and City */}
-          <div className="grid grid-cols-2 gap-4">
-            <select
-              value={selectedCategory}
-              onChange={(e) => setSelectedCategory(e.target.value)}
-              className="px-4 py-3 border border-gray-300 rounded-lg text-gray-900 bg-white focus:outline-none focus:ring-2 focus:ring-pink-500 appearance-none cursor-pointer font-medium"
-              style={{
-                backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23666' d='M6 9L1 4h10z'/%3E%3C/svg%3E")`,
-                backgroundRepeat: "no-repeat",
-                backgroundPosition: "right 0.75rem center",
-                paddingRight: "2.5rem",
-              }}
-            >
-              <option>Escorts</option>
-              <option>Guías Turísticos</option>
-              <option>Servicios Especiales</option>
-            </select>
-
-            <select
-              value={selectedCity}
-              onChange={(e) => setSelectedCity(e.target.value)}
-              className="px-4 py-3 border border-gray-300 rounded-lg text-gray-900 bg-white focus:outline-none focus:ring-2 focus:ring-pink-500 appearance-none cursor-pointer font-medium"
-              style={{
-                backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23666' d='M6 9L1 4h10z'/%3E%3C/svg%3E")`,
-                backgroundRepeat: "no-repeat",
-                backgroundPosition: "right 0.75rem center",
-                paddingRight: "2.5rem",
-              }}
-            >
-              <option>Todas las ciudades</option>
-              <option>La Paz</option>
-              <option>Santa Cruz</option>
-              <option>Cochabamba</option>
-              <option>Oruro</option>
-              <option>Sucre</option>
-              <option>Potosí</option>
-            </select>
-          </div>
+        <div className="p-6 space-y-5 max-h-[65vh] overflow-y-auto">
 
           {/* Search Input */}
-          <input
-            type="text"
-            placeholder="Buscar aquí...."
-            value={searchText}
-            onChange={(e) => setSearchText(e.target.value)}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-pink-500 font-medium"
-          />
+          <div className="relative group">
+            <div className="absolute -inset-0.5 bg-gradient-to-r from-primary via-secondary to-primary rounded-2xl opacity-0 group-focus-within:opacity-30 blur transition-opacity duration-300" />
+            <div className="relative flex items-center bg-background/50 backdrop-blur-sm border border-white/10 rounded-xl overflow-hidden group-focus-within:border-primary/50 transition-colors">
+              <div className="pl-4">
+                <Search className="w-5 h-5 text-muted-foreground" />
+              </div>
+              <input
+                type="text"
+                placeholder="Buscar por nombre, servicio o descripción..."
+                value={searchText}
+                onChange={(e) => setSearchText(e.target.value)}
+                className="w-full px-4 py-4 bg-transparent text-foreground placeholder-muted-foreground focus:outline-none font-medium"
+              />
+              {searchText && (
+                <button
+                  onClick={() => setSearchText("")}
+                  className="pr-4 text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  <X className="w-4 h-4" />
+                </button>
+              )}
+            </div>
+          </div>
+
+          {/* Category and City - Two columns */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {/* Category Select */}
+            <div className="space-y-2">
+              <label className="text-xs font-semibold text-muted-foreground uppercase tracking-wider flex items-center gap-2">
+                <Sparkles className="w-3 h-3 text-primary" />
+                Categoría
+              </label>
+              <div className="relative">
+                <select
+                  value={selectedCategory}
+                  onChange={(e) => setSelectedCategory(e.target.value)}
+                  className="w-full px-4 py-3.5 bg-background/50 backdrop-blur-sm border border-white/10 rounded-xl text-foreground focus:outline-none focus:border-primary/50 appearance-none cursor-pointer font-medium transition-colors hover:border-primary/30"
+                >
+                  {categories.map((cat) => (
+                    <option key={cat} value={cat} className="bg-card text-foreground">
+                      {cat}
+                    </option>
+                  ))}
+                </select>
+                <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground pointer-events-none" />
+              </div>
+            </div>
+
+            {/* City Select */}
+            <div className="space-y-2">
+              <label className="text-xs font-semibold text-muted-foreground uppercase tracking-wider flex items-center gap-2">
+                <MapPin className="w-3 h-3 text-primary" />
+                Ciudad
+              </label>
+              <div className="relative">
+                <select
+                  value={selectedCity}
+                  onChange={(e) => setSelectedCity(e.target.value)}
+                  className="w-full px-4 py-3.5 bg-background/50 backdrop-blur-sm border border-white/10 rounded-xl text-foreground focus:outline-none focus:border-primary/50 appearance-none cursor-pointer font-medium transition-colors hover:border-primary/30"
+                >
+                  {cities.map((city) => (
+                    <option key={city} value={city} className="bg-card text-foreground">
+                      {city}
+                    </option>
+                  ))}
+                </select>
+                <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground pointer-events-none" />
+              </div>
+            </div>
+          </div>
 
           {/* Filters Header */}
-          <div className="flex items-center gap-2 pt-2">
-            <span className="text-gray-800 font-semibold flex items-center gap-2">⚙️ Filtros</span>
-          </div>
-
-          {/* Filter Items */}
-          <div className="space-y-4">
-            {filters.map((filter) => (
-              <div key={filter.id} className="border-b border-gray-200 pb-4">
-                <button
-                  onClick={() => setExpandedFilter(expandedFilter === filter.id ? null : filter.id)}
-                  className="w-full flex items-center justify-between group py-2"
-                >
-                  <div className="flex items-center gap-2 text-gray-900 font-semibold">
-                    <span>{filter.icon}</span>
-                    <span>{filter.label}</span>
-                  </div>
-                  <ChevronDown
-                    className={`w-5 h-5 text-pink-600 transition-transform duration-300 ${
-                      expandedFilter === filter.id ? "rotate-180" : ""
-                    }`}
-                  />
-                </button>
-
-                {/* Filter Options as Chips */}
-                {expandedFilter === filter.id && (
-                  <div className="mt-3 flex flex-wrap gap-2">
-                    {filter.options.map((option) => (
-                      <button
-                        key={option}
-                        onClick={() => handleFilterToggle(filter.id, option)}
-                        className={`px-4 py-2 rounded-full border-2 font-medium transition-all duration-200 ${
-                          selectedFilters[filter.id]?.includes(option)
-                            ? "bg-pink-600 text-white border-pink-600"
-                            : "bg-white text-gray-700 border-gray-300 hover:border-pink-600"
-                        }`}
-                      >
-                        {option}
-                      </button>
-                    ))}
-                  </div>
-                )}
+          <div className="flex items-center justify-between pt-2">
+            <div className="flex items-center gap-2">
+              <div className="p-1.5 bg-primary/10 rounded-lg">
+                <SlidersHorizontal className="w-4 h-4 text-primary" />
               </div>
-            ))}
+              <span className="text-foreground font-semibold">Filtros</span>
+              {activeFiltersCount > 0 && (
+                <span className="px-2 py-0.5 bg-primary/20 text-primary text-xs font-bold rounded-full">
+                  {activeFiltersCount}
+                </span>
+              )}
+            </div>
+            {activeFiltersCount > 0 && (
+              <button
+                onClick={() => setSelectedFilters({})}
+                className="text-xs text-muted-foreground hover:text-primary transition-colors"
+              >
+                Limpiar filtros
+              </button>
+            )}
           </div>
 
-          {/* Show All Link */}
-          <button className="text-pink-600 font-semibold text-sm hover:underline flex items-center gap-1 pt-2">
-            + Mostrar todo
-          </button>
+          {/* Filter Items - Single column */}
+          <div className="space-y-3">
+            {filters.map((filter) => {
+              const isExpanded = expandedFilter === filter.id
+              const selectedCount = selectedFilters[filter.id]?.length || 0
+
+              return (
+                <div
+                  key={filter.id}
+                  className={`rounded-xl border transition-all duration-300 ${
+                    isExpanded
+                      ? "bg-background/60 border-primary/30"
+                      : "bg-background/30 border-white/10 hover:border-white/20"
+                  }`}
+                >
+                  <button
+                    onClick={() => setExpandedFilter(isExpanded ? null : filter.id)}
+                    className="w-full flex items-center justify-between p-4"
+                  >
+                    <div className="flex items-center gap-3">
+                      <span className="text-foreground font-medium">{filter.label}</span>
+                      {selectedCount > 0 && (
+                        <span className="px-2 py-0.5 bg-primary text-primary-foreground text-xs font-bold rounded-full">
+                          {selectedCount}
+                        </span>
+                      )}
+                    </div>
+                    <ChevronDown
+                      className={`w-5 h-5 text-primary transition-transform duration-300 ${
+                        isExpanded ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+
+                  {/* Filter Options as Chips */}
+                  {isExpanded && (
+                    <div className="px-4 pb-4 flex flex-wrap gap-2">
+                      {filter.options.map((option) => {
+                        const isSelected = selectedFilters[filter.id]?.includes(option)
+                        return (
+                          <button
+                            key={option}
+                            onClick={() => handleFilterToggle(filter.id, option)}
+                            className={`px-4 py-2 rounded-full font-medium text-sm transition-all duration-300 ${
+                              isSelected
+                                ? "bg-gradient-to-r from-primary to-secondary text-primary-foreground shadow-lg shadow-primary/20"
+                                : "bg-background/50 text-foreground/80 border border-white/10 hover:border-primary/50 hover:text-primary"
+                            }`}
+                          >
+                            {option}
+                          </button>
+                        )
+                      })}
+                    </div>
+                  )}
+                </div>
+              )
+            })}
+          </div>
         </div>
 
         {/* Footer */}
-        <div className="px-6 py-4 border-t border-gray-200 bg-gray-50 flex gap-3">
-          <button
-            onClick={handleClearAll}
-            className="flex-1 text-pink-600 hover:text-pink-700 font-bold py-3 rounded-lg hover:bg-pink-50 transition text-sm"
-          >
-            ELIMINAR TODOS
-          </button>
-          <button className="flex-1 bg-pink-600 hover:bg-pink-700 text-white font-bold py-3 rounded-lg transition flex items-center justify-center gap-2">
-            <Search className="w-5 h-5" />
-            BUSCAR
-          </button>
+        <div className="relative p-5 border-t border-white/10">
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-secondary/5" />
+          <div className="relative flex gap-3">
+            <button
+              onClick={handleClearAll}
+              className="flex-1 px-6 py-3.5 text-muted-foreground hover:text-foreground font-semibold rounded-xl border border-white/10 hover:border-white/20 hover:bg-white/5 transition-all duration-300"
+            >
+              Limpiar todo
+            </button>
+            <button className="flex-1 relative group overflow-hidden rounded-xl bg-gradient-to-r from-primary via-primary to-secondary p-[1px] transition-all duration-300 hover:shadow-xl hover:shadow-primary/30">
+              <div className="relative bg-gradient-to-r from-primary via-primary to-secondary rounded-xl px-6 py-3.5 flex items-center justify-center gap-2">
+                <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
+                <Search className="w-5 h-5 text-primary-foreground relative" />
+                <span className="font-bold text-primary-foreground relative">Buscar</span>
+              </div>
+            </button>
+          </div>
         </div>
       </DialogContent>
     </Dialog>

@@ -8,7 +8,7 @@ export default function Hero() {
   const [isSearchOpen, setIsSearchOpen] = useState(false)
 
   return (
-    <div className="relative overflow-hidden bg-gradient-to-b from-background via-background to-muted/20">
+    <div className="relative overflow-hidden bg-gradient-to-b from-background via-background to-muted/10">
       {/* Background Image with Overlay */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10 dark:opacity-5"
@@ -18,50 +18,57 @@ export default function Hero() {
         }}
       />
 
-      {/* Decorative gradient orbs */}
-      <div className="absolute top-20 right-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl opacity-20 dark:opacity-10"></div>
-      <div className="absolute bottom-20 left-10 w-96 h-96 bg-secondary/20 rounded-full blur-3xl opacity-20 dark:opacity-10"></div>
+      {/* Decorative gradient orbs - enhanced */}
+      <div className="absolute top-20 right-10 w-96 h-96 bg-primary/20 rounded-full blur-3xl opacity-30 dark:opacity-15 animate-pulse"></div>
+      <div className="absolute bottom-20 left-10 w-[500px] h-[500px] bg-secondary/20 rounded-full blur-3xl opacity-30 dark:opacity-15 animate-pulse" style={{ animationDelay: "1s" }}></div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-primary/10 rounded-full blur-3xl opacity-20"></div>
 
       {/* Content */}
-      <div className="relative py-20 sm:py-24 md:py-32 lg:py-40 px-4">
-        <div className="max-w-4xl mx-auto">
+      <div className="relative py-24 sm:py-28 md:py-36 lg:py-44 px-4">
+        <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
-              <Sparkles className="w-4 h-4 text-primary" />
-              <span className="text-sm font-medium text-primary">Plataforma Discreta y Segura</span>
+            <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary/10 backdrop-blur-xl border border-primary/30 shadow-lg shadow-primary/5 mb-8 hover:scale-105 transition-transform duration-300">
+              <Sparkles className="w-4 h-4 text-primary animate-pulse" />
+              <span className="text-sm font-bold text-primary tracking-wide">Plataforma Discreta y Segura</span>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 text-balance leading-tight tracking-tight">
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-foreground mb-8 text-balance leading-[1.1] tracking-tight">
               Encuentra Compañía en{" "}
-              <span className="bg-gradient-to-r from-primary via-primary to-secondary bg-clip-text text-transparent">
-                Bolivia
+              <span className="relative inline-block">
+                <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent animate-gradient bg-[length:200%_auto]">
+                  Bolivia
+                </span>
+                <div className="absolute -inset-1 bg-gradient-to-r from-primary via-secondary to-primary opacity-20 blur-lg -z-10"></div>
               </span>
             </h1>
 
-            <p className="text-lg sm:text-xl text-muted-foreground mb-3 text-balance max-w-2xl mx-auto">
+            <p className="text-xl sm:text-2xl text-muted-foreground mb-4 text-balance max-w-3xl mx-auto font-medium">
               Conecta de forma segura y directa. Tu privacidad es nuestra prioridad.
             </p>
-            <p className="text-base text-muted-foreground/80 max-w-xl mx-auto">
+            <p className="text-base sm:text-lg text-muted-foreground/70 max-w-2xl mx-auto">
               Email, teléfono o WhatsApp - Tú controlas tu información de contacto
             </p>
           </div>
 
-          {/* Search Button */}
+          {/* Search Button - Enhanced glassmorphism */}
           <div className="max-w-2xl mx-auto">
-            <button
-              onClick={() => setIsSearchOpen(true)}
-              className="group w-full px-6 py-4 bg-card/80 backdrop-blur-md rounded-2xl shadow-lg border border-border/50 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 flex items-center gap-4"
-            >
-              <div className="p-2 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
-                <Search className="w-5 h-5 text-primary" />
-              </div>
-              <span className="text-base text-muted-foreground group-hover:text-foreground transition-colors text-left">
-                Buscar por nombre, ciudad o servicios...
-              </span>
-              <kbd className="hidden sm:inline-flex ml-auto px-2 py-1 text-xs font-semibold text-muted-foreground bg-muted rounded border border-border">
-                ⌘K
-              </kbd>
-            </button>
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-primary via-secondary to-primary rounded-3xl opacity-20 group-hover:opacity-30 blur-xl transition-opacity duration-500"></div>
+              <button
+                onClick={() => setIsSearchOpen(true)}
+                className="relative w-full px-6 py-5 bg-card/60 backdrop-blur-xl rounded-2xl shadow-2xl border border-white/10 hover:border-primary/40 hover:bg-card/80 transition-all duration-300 flex items-center gap-4"
+              >
+                <div className="p-3 bg-gradient-to-br from-primary/20 to-secondary/20 backdrop-blur-xl rounded-xl border border-white/20 group-hover:scale-110 transition-transform duration-300">
+                  <Search className="w-5 h-5 text-primary" />
+                </div>
+                <span className="text-base sm:text-lg text-muted-foreground group-hover:text-foreground transition-colors text-left font-medium">
+                  Buscar por nombre, ciudad o servicios...
+                </span>
+                <kbd className="hidden sm:inline-flex ml-auto px-3 py-2 text-xs font-bold text-primary bg-primary/10 backdrop-blur-sm rounded-lg border border-primary/30 shadow-sm">
+                  ⌘K
+                </kbd>
+              </button>
+            </div>
           </div>
 
           {/* SearchModal Modal */}

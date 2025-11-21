@@ -2,16 +2,15 @@
 
 import { useState, useMemo } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import SearchModal from "@/components/search-modal"
 import { anunciosData } from "@/lib/anuncios-data"
-import { Input } from "@/components/ui/input"
-import { Search, MapPin, Filter, ChevronDown } from "lucide-react"
+import { Search, MapPin, Filter, ChevronDown, Sparkles, CheckCircle2, Camera, MessageCircle, Eye } from "lucide-react"
 
 export default function AnunciosClientPage() {
   const [isSearchModalOpen, setIsSearchModalOpen] = useState(false)
-  const [searchTerm, setSearchTerm] = useState("")
   const [selectedCity, setSelectedCity] = useState("")
   const [showFilters, setShowFilters] = useState(false)
 
@@ -19,142 +18,201 @@ export default function AnunciosClientPage() {
 
   const filteredAnuncios = useMemo(() => {
     return anunciosData.filter((anuncio) => {
-      const matchesSearch =
-        anuncio.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        anuncio.anuncio.toLowerCase().includes(searchTerm.toLowerCase())
       const matchesCity = !selectedCity || anuncio.city === selectedCity
-      return matchesSearch && matchesCity
+      return matchesCity
     })
-  }, [searchTerm, selectedCity])
+  }, [selectedCity])
 
   return (
-    <main>
+    <main className="min-h-screen bg-background">
       <Header />
       <SearchModal isOpen={isSearchModalOpen} onClose={() => setIsSearchModalOpen(false)} />
 
-      <div className="min-h-screen bg-gradient-to-b from-background to-background/50">
-        <div className="max-w-6xl mx-auto px-4 py-12">
-          <div className="mb-12">
-            <div className="flex items-center justify-between mb-8">
-              <div>
-                <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent dark:from-primary dark:to-secondary dark:text-transparent mb-2">
-                  Todos los Anuncios
-                </h1>
-                <p className="text-lg text-muted-foreground">
-                  {filteredAnuncios.length} anuncio{filteredAnuncios.length !== 1 ? "s" : ""} encontrado
-                  {filteredAnuncios.length !== 1 ? "s" : ""}
-                </p>
+      {/* Hero section */}
+      <section className="relative py-12 sm:py-16 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-background to-background" />
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl opacity-30" />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-3xl opacity-30" />
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-8">
+            <div>
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 backdrop-blur-sm border border-primary/20 mb-4">
+                <Sparkles className="w-4 h-4 text-primary" />
+                <span className="text-sm font-semibold text-primary">Anuncios verificados</span>
               </div>
-              <button
-                onClick={() => setShowFilters(!showFilters)}
-                className="md:hidden flex items-center gap-2 px-4 py-2 bg-card border border-border rounded-lg hover:border-accent/50 transition"
-              >
-                <Filter size={20} />
-                <span className="text-sm font-semibold">Filtros</span>
-              </button>
+              <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-3">
+                Anuncios en{" "}
+                <span className="bg-gradient-to-r from-primary via-primary to-secondary bg-clip-text text-transparent">
+                  Bolivia
+                </span>
+              </h1>
+              <p className="text-lg text-muted-foreground">
+                {filteredAnuncios.length} anuncio{filteredAnuncios.length !== 1 ? "s" : ""} disponible{filteredAnuncios.length !== 1 ? "s" : ""}
+              </p>
             </div>
 
-            <div className={`${showFilters ? "block" : "hidden"} md:block space-y-4 mb-8 pb-8 border-b border-border`}>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="relative cursor-pointer" onClick={() => setIsSearchModalOpen(true)}>
-                  <Search className="absolute left-4 top-3.5 w-5 h-5 text-muted-foreground pointer-events-none" />
-                  <Input
-                    placeholder="Buscar anuncios (click para abrir búsqueda avanzada)..."
-                    value={searchTerm}
-                    onChange={(e) => {
-                      e.preventDefault()
-                      setIsSearchModalOpen(true)
-                    }}
-                    onFocus={() => setIsSearchModalOpen(true)}
-                    readOnly
-                    className="pl-12 bg-card dark:bg-card border-border text-foreground placeholder-muted-foreground focus:ring-accent cursor-pointer"
-                  />
-                </div>
-                <div className="relative">
-                  <MapPin className="absolute left-4 top-3.5 w-5 h-5 text-muted-foreground pointer-events-none" />
-                  <select
-                    value={selectedCity}
-                    onChange={(e) => setSelectedCity(e.target.value)}
-                    className="w-full pl-12 pr-4 py-2 rounded-lg bg-card dark:bg-card border border-border text-foreground cursor-pointer hover:border-accent/50 focus:border-accent focus:ring-2 focus:ring-accent/30 transition-colors"
-                  >
-                    <option value="">Todas las ciudades</option>
-                    {cities.map((city) => (
-                      <option key={city} value={city}>
-                        {city}
-                      </option>
-                    ))}
-                  </select>
-                  <ChevronDown className="absolute right-4 top-3 w-5 h-5 text-muted-foreground pointer-events-none" />
-                </div>
-              </div>
-            </div>
+            <button
+              onClick={() => setShowFilters(!showFilters)}
+              className="sm:hidden flex items-center gap-2 px-4 py-3 bg-card/80 backdrop-blur-sm border border-white/10 rounded-xl hover:border-primary/30 transition-all"
+            >
+              <Filter size={18} className="text-primary" />
+              <span className="text-sm font-semibold">Filtros</span>
+            </button>
           </div>
 
-          <div className="space-y-6">
-            {filteredAnuncios.length > 0 ? (
-              filteredAnuncios.map((anuncio, index) => (
-                <Link key={index} href={`/anuncios/${index}`} className="group block">
-                  <div className="flex gap-4 p-6 bg-card dark:bg-card rounded-2xl border border-border hover:border-accent/60 transition-all duration-300 hover:shadow-lg hover:shadow-accent/10 cursor-pointer">
-                    {/* Image */}
-                    <div className="flex-shrink-0 w-32 h-32 md:w-40 md:h-40 overflow-hidden rounded-xl bg-muted">
-                      <img
-                        src={
-                          anuncio.fotos[0] ||
-                          "/placeholder.svg?height=160&width=160&query=adult%20classified%20placeholder" ||
-                          "/placeholder.svg" ||
-                          "/placeholder.svg" ||
-                          "/placeholder.svg"
-                        }
-                        alt={anuncio.title}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                      />
-                    </div>
+          {/* Filters */}
+          <div className={`${showFilters ? "block" : "hidden"} sm:block`}>
+            <div className="flex flex-col sm:flex-row gap-4 p-4 bg-card/60 backdrop-blur-xl rounded-2xl border border-white/10">
+              {/* Search */}
+              <button
+                onClick={() => setIsSearchModalOpen(true)}
+                className="flex-1 flex items-center gap-3 px-4 py-3.5 bg-background/50 border border-white/10 rounded-xl hover:border-primary/30 transition-all group"
+              >
+                <Search className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
+                <span className="text-muted-foreground group-hover:text-foreground transition-colors">
+                  Búsqueda avanzada...
+                </span>
+                <kbd className="hidden sm:inline-flex ml-auto px-2 py-1 text-xs font-semibold text-muted-foreground bg-muted/50 rounded border border-white/10">
+                  ⌘K
+                </kbd>
+              </button>
 
-                    {/* Content */}
-                    <div className="flex-1 flex flex-col justify-between">
-                      <div>
-                        <div className="flex items-start justify-between mb-3 gap-4">
-                          <h2 className="text-xl font-bold text-foreground group-hover:text-accent transition-colors line-clamp-2">
-                            {anuncio.title}
-                          </h2>
-                          <span className="text-xs text-muted-foreground bg-primary/10 dark:bg-primary/15 px-3 py-1 rounded-full whitespace-nowrap flex-shrink-0">
-                            {anuncio.date}
-                          </span>
-                        </div>
-                        <p className="text-sm text-muted-foreground mb-4 line-clamp-2">{anuncio.anuncio}</p>
-                        <div className="flex items-center gap-3 text-sm flex-wrap">
-                          <span className="inline-flex items-center gap-1">
-                            <MapPin size={16} className="text-accent" />
-                            <span className="text-accent font-semibold">{anuncio.city}</span>
-                          </span>
-                          <span className="text-muted-foreground">•</span>
-                          <span className="text-muted-foreground">
-                            {anuncio.fotos.length} foto{anuncio.fotos.length !== 1 ? "s" : ""}
-                          </span>
-                        </div>
-                      </div>
-
-                      {/* Footer */}
-                      <div className="flex items-center justify-between pt-4 border-t border-border/50">
-                        <div className="text-sm font-semibold text-accent">WhatsApp: {anuncio.whatsapp}</div>
-                        <span className="text-accent font-semibold group-hover:translate-x-1 transition-transform">
-                          Ver detalle →
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </Link>
-              ))
-            ) : (
-              <div className="text-center py-16">
-                <div className="text-6xl mb-4">🔍</div>
-                <p className="text-xl font-semibold text-foreground mb-2">No se encontraron anuncios</p>
-                <p className="text-muted-foreground">Intenta ajustar tus filtros de búsqueda</p>
+              {/* City Select */}
+              <div className="relative sm:w-64">
+                <MapPin className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-primary pointer-events-none" />
+                <select
+                  value={selectedCity}
+                  onChange={(e) => setSelectedCity(e.target.value)}
+                  className="w-full pl-12 pr-10 py-3.5 bg-background/50 border border-white/10 rounded-xl text-foreground appearance-none cursor-pointer hover:border-primary/30 focus:border-primary/50 focus:outline-none transition-colors font-medium"
+                >
+                  <option value="">Todas las ciudades</option>
+                  {cities.map((city) => (
+                    <option key={city} value={city}>
+                      {city}
+                    </option>
+                  ))}
+                </select>
+                <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground pointer-events-none" />
               </div>
-            )}
+            </div>
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* Anuncios List */}
+      <section className="max-w-5xl mx-auto px-4 sm:px-6 pb-16">
+        {filteredAnuncios.length > 0 ? (
+          <div className="space-y-4">
+            {filteredAnuncios.map((anuncio, index) => (
+              <Link
+                key={index}
+                href={`/anuncios/${index}`}
+                className="group block"
+              >
+                <article className="flex gap-4 sm:gap-6 p-4 sm:p-5 bg-card/80 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300">
+                  {/* Image */}
+                  <div className="relative flex-shrink-0 w-28 h-28 sm:w-40 sm:h-40 overflow-hidden rounded-xl bg-muted">
+                    {anuncio.fotos.length > 0 ? (
+                      <Image
+                        src={anuncio.fotos[0]}
+                        alt={anuncio.title}
+                        fill
+                        sizes="160px"
+                        className="object-cover transition-transform duration-500 group-hover:scale-110"
+                        loading="lazy"
+                      />
+                    ) : (
+                      <div className="flex h-full items-center justify-center bg-gradient-to-br from-primary/10 to-secondary/10">
+                        <Camera className="w-8 h-8 text-muted-foreground/50" />
+                      </div>
+                    )}
+
+                    {/* Photo count badge */}
+                    <div className="absolute bottom-2 right-2 flex items-center gap-1 px-2 py-1 bg-background/80 backdrop-blur-sm rounded-md">
+                      <Camera className="w-3 h-3 text-foreground" />
+                      <span className="text-xs font-semibold text-foreground">{anuncio.fotos.length}</span>
+                    </div>
+
+                    {/* Verified badge */}
+                    {anuncio.verificado && (
+                      <div className="absolute top-2 left-2 flex items-center gap-1 px-2 py-1 bg-primary/90 backdrop-blur-sm rounded-md">
+                        <CheckCircle2 className="w-3 h-3 text-primary-foreground" />
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Content */}
+                  <div className="flex-1 flex flex-col justify-between min-w-0">
+                    <div>
+                      {/* Header */}
+                      <div className="flex items-start justify-between gap-3 mb-2">
+                        <h2 className="text-lg sm:text-xl font-bold text-foreground group-hover:text-primary transition-colors line-clamp-2 leading-tight">
+                          {anuncio.title}
+                        </h2>
+                        <span className="hidden sm:inline-flex flex-shrink-0 text-xs text-muted-foreground bg-muted/50 px-2.5 py-1 rounded-md">
+                          {anuncio.date}
+                        </span>
+                      </div>
+
+                      {/* Description */}
+                      <p className="text-sm text-muted-foreground mb-3 line-clamp-2 leading-relaxed">
+                        {anuncio.anuncio}
+                      </p>
+
+                      {/* Meta tags */}
+                      <div className="flex items-center gap-3 text-sm flex-wrap">
+                        <span className="inline-flex items-center gap-1.5 text-primary font-medium">
+                          <MapPin className="w-4 h-4" />
+                          {anuncio.city}
+                        </span>
+                        {anuncio.vistas && (
+                          <>
+                            <span className="text-muted-foreground/50">•</span>
+                            <span className="inline-flex items-center gap-1 text-muted-foreground">
+                              <Eye className="w-4 h-4" />
+                              {anuncio.vistas} vistas
+                            </span>
+                          </>
+                        )}
+                        <span className="sm:hidden text-muted-foreground/50">•</span>
+                        <span className="sm:hidden text-xs text-muted-foreground">{anuncio.date}</span>
+                      </div>
+                    </div>
+
+                    {/* Footer */}
+                    <div className="flex items-center justify-between pt-3 mt-3 border-t border-white/10">
+                      <div className="flex items-center gap-1.5 text-sm text-muted-foreground">
+                        <MessageCircle className="w-4 h-4 text-primary" />
+                        <span className="font-medium">WhatsApp disponible</span>
+                      </div>
+                      <span className="text-primary font-semibold text-sm group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
+                        Ver detalle
+                        <span>→</span>
+                      </span>
+                    </div>
+                  </div>
+                </article>
+              </Link>
+            ))}
+          </div>
+        ) : (
+          <div className="text-center py-20">
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-primary/10 rounded-full mb-6">
+              <Search className="w-10 h-10 text-primary" />
+            </div>
+            <h3 className="text-2xl font-bold text-foreground mb-3">No se encontraron anuncios</h3>
+            <p className="text-muted-foreground mb-6">Intenta ajustar tus filtros de búsqueda</p>
+            <button
+              onClick={() => setSelectedCity("")}
+              className="px-6 py-3 bg-primary text-primary-foreground font-semibold rounded-xl hover:shadow-lg hover:shadow-primary/30 transition-all"
+            >
+              Ver todos los anuncios
+            </button>
+          </div>
+        )}
+      </section>
+
       <Footer />
     </main>
   )
