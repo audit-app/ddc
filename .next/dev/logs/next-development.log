@@ -1,45 +1,12 @@
-[00:00:01.284] Server  LOG      ✓ Ready in 905ms
-[00:00:07.802] Server  LOG      ○ Compiling / ...
-[00:00:09.506] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:09.768] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:00:09.768] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:00:09.768] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763760732291}
-[00:00:15.772] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/anuncios color: rgb(120, 120, 120) color: inherit {"dp":"/anuncios","o":"http://localhost:3000/anuncios","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763760738532}
-[00:00:21.738] Browser ERROR   `DialogContent` requires a `DialogTitle` for the component to be accessible for screen reader users.
-
-If you want to hide the `DialogTitle`, you can wrap it with our VisuallyHidden component.
-
-For more information, see https://radix-ui.com/primitives/docs/components/dialog
-[00:00:21.738] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
-[00:00:21.738] Browser ERROR   `DialogContent` requires a `DialogTitle` for the component to be accessible for screen reader users.
-
-If you want to hide the `DialogTitle`, you can wrap it with our VisuallyHidden component.
-
-For more information, see https://radix-ui.com/primitives/docs/components/dialog
-[00:00:21.738] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
-[00:00:27.579] Server  LOG     Generating metadata for anuncio ID: "0" {}
-[00:00:27.744] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/anuncios/0 color: rgb(120, 120, 120) color: inherit {"dp":"/anuncios/[id]","o":"http://localhost:3000/anuncios/0","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763760751031}
-[00:00:28.004] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
-[00:00:30.279] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/anuncios color: rgb(120, 120, 120) color: inherit {"dp":"/anuncios","o":"http://localhost:3000/anuncios","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763760753743}
-[00:01:39.115] Server  LOG      ✓ Compiled in 233ms
-[00:01:45.043] Browser ERROR   `DialogContent` requires a `DialogTitle` for the component to be accessible for screen reader users.
-
-If you want to hide the `DialogTitle`, you can wrap it with our VisuallyHidden component.
-
-For more information, see https://radix-ui.com/primitives/docs/components/dialog
-[00:01:45.043] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
-[00:01:45.043] Browser ERROR   `DialogContent` requires a `DialogTitle` for the component to be accessible for screen reader users.
-
-If you want to hide the `DialogTitle`, you can wrap it with our VisuallyHidden component.
-
-For more information, see https://radix-ui.com/primitives/docs/components/dialog
-[00:01:45.043] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
-[00:01:46.891] Server  LOG     Generating metadata for anuncio ID: "0" {}
-[00:01:47.052] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/anuncios/0 color: rgb(120, 120, 120) color: inherit {"dp":"/anuncios/[id]","o":"http://localhost:3000/anuncios/0","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763760834070}
-[00:01:48.766] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/anuncios color: rgb(120, 120, 120) color: inherit {"dp":"/anuncios","o":"http://localhost:3000/anuncios","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763760835884}
-[00:03:39.607] Server  LOG     Generating metadata for anuncio ID: "0" {}
-[00:03:39.757] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/anuncios/0 color: rgb(120, 120, 120) color: inherit {"dp":"/anuncios/[id]","o":"http://localhost:3000/anuncios/0","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763760952133}
-[00:03:41.701] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/anuncios color: rgb(120, 120, 120) color: inherit {"dp":"/anuncios","o":"http://localhost:3000/anuncios","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763760954153}
-[00:03:45.260] Server  LOG     Generating metadata for anuncio ID: "0" {}
-[00:03:45.408] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/anuncios/0 color: rgb(120, 120, 120) color: inherit {"dp":"/anuncios/[id]","o":"http://localhost:3000/anuncios/0","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763760958007}
-[00:03:48.163] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/anuncios color: rgb(120, 120, 120) color: inherit {"dp":"/anuncios","o":"http://localhost:3000/anuncios","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763760960918}
+[00:00:01.215] Server  LOG      ✓ Ready in 841ms
+[00:00:04.593] Server  LOG      ○ Compiling / ...
+[00:00:07.196] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:07.520] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:00:07.520] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:00:07.520] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763761756612}
+[00:00:11.648] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/anuncios color: rgb(120, 120, 120) color: inherit {"dp":"/anuncios","o":"http://localhost:3000/anuncios","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763761760935}
+[00:00:14.168] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/anuncios/0 color: rgb(120, 120, 120) color: inherit {"dp":"/anuncios/[id]","o":"http://localhost:3000/anuncios/0","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763761763551}
+[00:00:14.472] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[00:00:51.873] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/anuncios color: rgb(120, 120, 120) color: inherit {"dp":"/anuncios","o":"http://localhost:3000/anuncios","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763761803155}
+[00:00:55.750] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/anuncios/0 color: rgb(120, 120, 120) color: inherit {"dp":"/anuncios/[id]","o":"http://localhost:3000/anuncios/0","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763761807211}
+[00:00:57.878] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/anuncios color: rgb(120, 120, 120) color: inherit {"dp":"/anuncios","o":"http://localhost:3000/anuncios","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763761809436}

@@ -1,52 +1,90 @@
 import type { Metadata } from "next"
+import Link from "next/link"
 import { anunciosData } from "@/lib/anuncios-data"
 import AnuncioDetailClient from "./anuncio-detail-client"
+import { ChevronLeft } from "lucide-react"
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
   const { id } = await params
   const anuncio = anunciosData[Number.parseInt(id)]
-  console.log("Generating metadata for anuncio ID:", id, anuncio)
+
   if (!anuncio) {
     return {
-      title: "Anuncio no encontrado",
+      title: "Anuncio no encontrado | Clasificados Bolivia",
       description: "El anuncio que buscas no existe o ha sido eliminado.",
     }
   }
 
-  const imageUrl = anuncio.fotos[0] || "/adult-classified.jpg"
+  const imageUrl = anuncio.fotos[0] || "/og-default.jpg"
+  const description = anuncio.anuncio.substring(0, 155) + "..."
 
   return {
-    title: `${anuncio.title} | Tablón de Anuncios`,
-    description: anuncio.anuncio.substring(0, 155),
-    keywords: [anuncio.title, anuncio.city, "anuncio", "contacto directo"].join(", "),
+    title: `${anuncio.title} en ${anuncio.city} | Clasificados Bolivia`,
+    description: description,
+    keywords: [
+      anuncio.title,
+      anuncio.city,
+      "escorts " + anuncio.city.toLowerCase(),
+      "acompañantes " + anuncio.city.toLowerCase(),
+      "clasificados bolivia",
+      "contacto whatsapp",
+      ...(anuncio.servicios || []),
+    ].join(", "),
     openGraph: {
-      title: anuncio.title,
-      description: anuncio.anuncio.substring(0, 155),
-      type: "website",
+      title: `${anuncio.title} - ${anuncio.city}`,
+      description: description,
+      type: "article",
       images: [
         {
           url: imageUrl,
           width: 1200,
-          height: 1200,
-          alt: anuncio.title,
-        },
-        {
-          url: imageUrl,
-          width: 630,
           height: 630,
           alt: anuncio.title,
         },
       ],
       locale: "es_BO",
+      siteName: "Clasificados Bolivia",
     },
     twitter: {
       card: "summary_large_image",
       title: anuncio.title,
-      description: anuncio.anuncio.substring(0, 155),
+      description: description,
       images: [imageUrl],
     },
     alternates: {
-      canonical: `https://skokka.com/anuncios/${id}`,
+      canonical: `/anuncios/${id}`,
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
+  }
+}
+
+// Generate JSON-LD structured data
+function generateJsonLd(anuncio: typeof anunciosData[0], id: string) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: anuncio.title,
+    description: anuncio.anuncio,
+    image: anuncio.fotos,
+    offers: {
+      "@type": "Offer",
+      availability: "https://schema.org/InStock",
+      priceCurrency: "BOB",
+      price: anuncio.precio || "0",
+    },
+    aggregateRating: anuncio.verificado
+      ? {
+          "@type": "AggregateRating",
+          ratingValue: "5",
+          reviewCount: "1",
+        }
+      : undefined,
+    brand: {
+      "@type": "Brand",
+      name: "Clasificados Bolivia",
     },
   }
 }
@@ -57,16 +95,36 @@ export default async function AnuncioDetailPage({ params }: { params: Promise<{ 
 
   if (!anuncio) {
     return (
-      <main>
+      <main className="min-h-screen bg-background">
         <div className="min-h-screen flex items-center justify-center">
-          <div className="text-center">
+          <div className="text-center px-4">
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-primary/10 rounded-full mb-6">
+              <span className="text-4xl">🔍</span>
+            </div>
             <h1 className="text-2xl font-bold text-foreground mb-4">Anuncio no encontrado</h1>
-            <p className="text-muted-foreground">El anuncio que buscas no existe o ha sido eliminado.</p>
+            <p className="text-muted-foreground mb-6">El anuncio que buscas no existe o ha sido eliminado.</p>
+            <Link
+              href="/anuncios"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-semibold rounded-xl hover:shadow-lg hover:shadow-primary/30 transition-all"
+            >
+              <ChevronLeft className="w-4 h-4" />
+              Volver a anuncios
+            </Link>
           </div>
         </div>
       </main>
     )
   }
 
-  return <AnuncioDetailClient anuncio={anuncio} anuncioId={id} />
+  const jsonLd = generateJsonLd(anuncio, id)
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <AnuncioDetailClient anuncio={anuncio} anuncioId={id} />
+    </>
+  )
 }
