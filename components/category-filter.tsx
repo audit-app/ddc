@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { X } from "lucide-react"
+import { X, MapPin } from "lucide-react"
 
 type City = "santa-cruz" | "cochabamba" | "la-paz" | "el-alto" | "sucre"
 
@@ -30,39 +30,45 @@ export default function CategoryFilter({ category = "Viajeras" }: CategoryFilter
   }
 
   return (
-    <section className="w-full bg-background py-16 md:py-24 border-t border-border">
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="mb-10">
-          <div className="flex items-center gap-3 mb-2">
-            <div className="w-6 h-6 bg-gradient-to-br from-accent to-secondary rounded-lg flex items-center justify-center">
-              <span className="text-accent-foreground text-xs font-bold">👯</span>
+    <section className="py-16 sm:py-20 border-t border-border/40">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="mb-12">
+          <div className="flex items-center gap-3 mb-3">
+            <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center shadow-md">
+              <MapPin className="w-5 h-5 text-primary-foreground" />
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent dark:from-primary dark:to-secondary dark:text-transparent">
+            <h2 className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-primary via-primary to-secondary bg-clip-text text-transparent">
               {category}
             </h2>
           </div>
-          <p className="text-muted-foreground text-lg ml-9">Explora anuncios en tu ciudad preferida</p>
+          <p className="text-muted-foreground text-base sm:text-lg ml-[52px]">
+            Explora anuncios en tu ciudad preferida
+          </p>
         </div>
 
         <div className="space-y-6">
           {/* Active filters display */}
           {selectedCities.length > 0 && (
-            <div className="flex items-center gap-2 flex-wrap">
+            <div className="flex items-center gap-2 flex-wrap p-4 bg-muted/30 rounded-xl border border-border/50">
               <span className="text-sm text-muted-foreground font-semibold">Filtros activos:</span>
               {selectedCities.map((cityId) => (
                 <div
                   key={cityId}
-                  className="inline-flex items-center gap-2 bg-primary/10 dark:bg-primary/20 border border-primary/30 dark:border-primary/40 text-foreground px-4 py-2 rounded-full text-sm font-medium"
+                  className="inline-flex items-center gap-2 bg-primary/10 border border-primary/30 text-primary px-3 py-1.5 rounded-lg text-sm font-medium"
                 >
                   {cities.find((c) => c.id === cityId)?.label}
-                  <button onClick={() => toggleCity(cityId)} className="hover:text-primary transition-colors">
-                    <X size={16} />
+                  <button
+                    onClick={() => toggleCity(cityId)}
+                    className="hover:text-primary/70 transition-colors"
+                    aria-label={`Eliminar filtro ${cities.find((c) => c.id === cityId)?.label}`}
+                  >
+                    <X size={14} />
                   </button>
                 </div>
               ))}
               <button
                 onClick={clearFilters}
-                className="text-xs text-accent hover:text-accent/80 font-semibold transition-colors"
+                className="text-xs text-muted-foreground hover:text-foreground font-semibold transition-colors ml-2"
               >
                 Limpiar todo
               </button>
@@ -70,18 +76,21 @@ export default function CategoryFilter({ category = "Viajeras" }: CategoryFilter
           )}
 
           {/* City filter buttons */}
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
             {cities.map((city) => (
               <button
                 key={city.id}
                 onClick={() => toggleCity(city.id)}
-                className={`px-4 py-3 rounded-xl font-semibold transition-all duration-200 text-sm border-2 ${
+                className={`group px-4 py-3.5 rounded-xl font-semibold transition-all duration-200 text-sm border-2 ${
                   selectedCities.includes(city.id)
-                    ? "border-accent bg-accent/15 dark:bg-accent/20 text-accent"
-                    : "border-border bg-card hover:border-accent/50 dark:hover:border-accent/60 text-foreground hover:text-accent"
+                    ? "border-primary bg-primary/10 text-primary shadow-md shadow-primary/10"
+                    : "border-border bg-card hover:border-primary/30 text-foreground hover:text-primary hover:bg-primary/5"
                 }`}
               >
-                {city.label}
+                <span className="flex items-center justify-center gap-2">
+                  {selectedCities.includes(city.id) && <MapPin className="w-4 h-4" />}
+                  {city.label}
+                </span>
               </button>
             ))}
           </div>
@@ -90,7 +99,7 @@ export default function CategoryFilter({ category = "Viajeras" }: CategoryFilter
           <div className="flex justify-center pt-4">
             <button
               onClick={() => setShowAllCities(!showAllCities)}
-              className="text-sm text-accent hover:text-accent/80 font-semibold transition-colors flex items-center gap-2"
+              className="text-sm text-primary hover:text-primary/80 font-semibold transition-colors flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-primary/5"
             >
               {showAllCities ? "← Ocultar más ciudades" : "Mostrar más ciudades →"}
             </button>

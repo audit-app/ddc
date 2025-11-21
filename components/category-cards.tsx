@@ -1,5 +1,7 @@
 "use client"
 
+import { Shield, Star, MessageCircle, CheckCircle2, ChevronRight } from "lucide-react"
+
 const categories = [
   {
     id: 1,
@@ -7,6 +9,7 @@ const categories = [
     description:
       "Publica tu anuncio con visibilidad premium. Incluye fotos, descripción y tu contacto directo de forma segura y discreta.",
     image: "https://bo.skokka.com/static/assets/womenseekmen_repr.09bc5c7b4ed7201892f6.jpg",
+    icon: Star,
     items: [
       { type: "Publicar", location: "Contacto directo" },
       { type: "Destacar", location: "Mayor visibilidad" },
@@ -19,6 +22,7 @@ const categories = [
     description:
       "Organiza tu anuncio en la categoría correcta. Encuentra exactamente lo que buscas de forma rápida y segura.",
     image: "/travel-companions-adventure.jpg",
+    icon: CheckCircle2,
     items: [
       { type: "Encuentros", location: "Categoría popular" },
       { type: "Viajes", location: "Compañía de viaje" },
@@ -30,6 +34,7 @@ const categories = [
     name: "Contacto Directo",
     description: "Controla tu información. Comparte email, teléfono o WhatsApp. Solo tú decides quién te contacta.",
     image: "/exclusive-events-networking.jpg",
+    icon: MessageCircle,
     items: [
       { type: "Email", location: "Privado" },
       { type: "Teléfono", location: "Directo" },
@@ -41,6 +46,7 @@ const categories = [
     name: "Seguridad y Privacidad",
     description: "Tu privacidad es nuestra prioridad. Anuncios protegidos, datos encriptados y comunidad verificada.",
     image: "/premium-dating-connections.jpg",
+    icon: Shield,
     items: [
       { type: "Encriptado", location: "Protegido" },
       { type: "Privado", location: "Confidencial" },
@@ -51,77 +57,81 @@ const categories = [
 
 export default function CategoryCards() {
   return (
-    <section className="bg-background py-16 md:py-24 border-t border-border">
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent dark:from-primary dark:to-secondary dark:text-transparent mb-3 text-balance">
-          Encuentros calientes en tu ciudad
+    <section className="py-20 sm:py-24 border-t border-border/40">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4 text-balance">
+            Encuentros discretos en{" "}
+            <span className="bg-gradient-to-r from-primary via-primary to-secondary bg-clip-text text-transparent">
+              tu ciudad
+            </span>
           </h2>
-          <p className="text-lg text-muted-foreground">Publica, busca y conecta de forma segura y discreta</p>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Publica, busca y conecta de forma segura y discreta
+          </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {categories.map((category) => (
-            <div
-              key={category.id}
-              className="group relative rounded-xl overflow-hidden bg-card border border-border hover:border-accent/50 dark:hover:border-accent/70 hover:shadow-lg dark:hover:shadow-accent/20 transition-all duration-300"
-            >
-              {/* Header Image */}
-              <div className="relative h-48 overflow-hidden bg-muted">
-                <img
-                  src={category.image || "/placeholder.svg"}
-                  alt={category.name}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent opacity-90" />
-                <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <div className="inline-flex items-center gap-2 bg-gradient-to-r from-primary to-secondary/90 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
-                    <span className="w-2 h-2 bg-white rounded-full animate-pulse"></span>
-                    <h3 className="text-lg font-bold text-primary-foreground">{category.name}</h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+          {categories.map((category) => {
+            const Icon = category.icon
+            return (
+              <div
+                key={category.id}
+                className="group relative rounded-2xl overflow-hidden bg-card border border-border/50 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300"
+              >
+                {/* Header Image */}
+                <div className="relative h-52 overflow-hidden bg-muted">
+                  <img
+                    src={category.image || "/placeholder.svg"}
+                    alt={category.name}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/50 to-transparent" />
+                  <div className="absolute top-4 right-4">
+                    <div className="p-2 bg-background/80 backdrop-blur-sm rounded-lg border border-border/50">
+                      <Icon className="w-5 h-5 text-primary" />
+                    </div>
+                  </div>
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <h3 className="text-xl font-bold text-foreground">{category.name}</h3>
                   </div>
                 </div>
-              </div>
 
-              {/* Description Section */}
-              <div className="p-6 border-b border-border/50">
-                <p className="text-sm text-foreground/75 leading-relaxed">{category.description}</p>
-              </div>
+                {/* Description Section */}
+                <div className="p-6 border-b border-border/50">
+                  <p className="text-sm text-muted-foreground leading-relaxed">{category.description}</p>
+                </div>
 
-              {/* Items List */}
-              <div className="p-6 space-y-3">
-                {category.items.map((item, idx) => (
-                  <div
-                    key={idx}
-                    className="flex items-center justify-between p-3 bg-gradient-to-r from-primary/5 to-secondary/5 dark:from-primary/10 dark:to-secondary/10 hover:from-primary/10 hover:to-secondary/10 dark:hover:from-primary/15 dark:hover:to-secondary/15 rounded-lg transition cursor-pointer group/item border border-border/30 dark:border-border/50"
-                  >
-                    <div>
-                      <p className="text-xs text-muted-foreground font-medium mb-0.5 uppercase tracking-wide">
-                        {item.type}
-                      </p>
-                      <p className="text-sm font-semibold text-foreground group-hover/item:text-accent transition">
-                        {item.location}
-                      </p>
-                    </div>
-                    <svg
-                      className="w-5 h-5 text-muted-foreground group-hover/item:text-accent transition"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
+                {/* Items List */}
+                <div className="p-6 space-y-2">
+                  {category.items.map((item, idx) => (
+                    <div
+                      key={idx}
+                      className="group/item flex items-center justify-between p-3 bg-muted/30 hover:bg-primary/5 rounded-lg transition-all duration-200 cursor-pointer border border-transparent hover:border-primary/20"
                     >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </div>
-                ))}
-              </div>
+                      <div>
+                        <p className="text-xs text-muted-foreground font-medium mb-0.5 uppercase tracking-wide">
+                          {item.type}
+                        </p>
+                        <p className="text-sm font-semibold text-foreground group-hover/item:text-primary transition-colors">
+                          {item.location}
+                        </p>
+                      </div>
+                      <ChevronRight className="w-5 h-5 text-muted-foreground group-hover/item:text-primary group-hover/item:translate-x-1 transition-all" />
+                    </div>
+                  ))}
+                </div>
 
-              {/* CTA Button */}
-              <div className="px-6 pb-6">
-                <button className="w-full bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 dark:hover:from-primary/95 dark:hover:to-secondary/95 text-primary-foreground font-bold py-3 rounded-lg transition transform hover:scale-105 duration-200 shadow-md dark:shadow-lg dark:shadow-primary/20">
-                  Conocer Más
-                </button>
+                {/* CTA Button */}
+                <div className="px-6 pb-6">
+                  <button className="group/btn relative w-full bg-gradient-to-r from-primary via-primary to-secondary text-primary-foreground font-semibold py-3 rounded-lg transition-all duration-300 shadow-md hover:shadow-xl hover:shadow-primary/20 overflow-hidden">
+                    <div className="absolute inset-0 bg-white/20 translate-y-full group-hover/btn:translate-y-0 transition-transform duration-300"></div>
+                    <span className="relative z-10">Conocer Más</span>
+                  </button>
+                </div>
               </div>
-            </div>
-          ))}
+            )
+          })}
         </div>
       </div>
     </section>

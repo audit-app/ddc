@@ -1,45 +1,51 @@
+"use client"
+
 import Link from "next/link"
-import { Mail, Phone, Shield, Upload } from "lucide-react"
+import { Mail, Phone, Shield, Upload, Heart } from "lucide-react"
 
 export default function Footer() {
   return (
-    <footer className="bg-card border-t border-border">
+    <footer className="border-t border-border/40 bg-muted/20">
       {/* Main Footer Content */}
-      <div className="max-w-7xl mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12 mb-12">
           {/* Left Section - Logo and Description */}
-          <div>
-            <div className="mb-4 flex items-center gap-2">
-              <div className="w-8 h-8 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center shadow-lg">
-                <span className="text-primary-foreground">📋</span>
+          <div className="lg:col-span-5">
+            <Link href="/" className="inline-flex items-center gap-2 mb-4 group">
+              <div className="w-9 h-9 bg-gradient-to-br from-primary via-primary to-secondary rounded-xl flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow">
+                <Heart className="w-5 h-5 text-primary-foreground" fill="currentColor" />
               </div>
-              <span className="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent dark:from-primary dark:to-secondary dark:text-transparent">
-                Tablón Discreto
-              </span>
-              <div className="inline-block bg-accent/20 border border-accent/50 px-3 py-1 rounded text-xs font-semibold text-accent ml-2">
-                PRIVADO
+              <div className="flex flex-col">
+                <span className="text-xl font-bold bg-gradient-to-r from-primary via-primary to-secondary bg-clip-text text-transparent">
+                  Damas de Compañía
+                </span>
+                <span className="text-[10px] text-muted-foreground -mt-1">Bolivia</span>
               </div>
-            </div>
-            <p className="text-sm text-muted-foreground leading-relaxed">
+            </Link>
+            <p className="text-sm text-muted-foreground leading-relaxed mb-4">
               Plataforma segura para publicar y encontrar anuncios discretos. Contacto directo, máxima privacidad y
               verificación completa. Tu información está protegida.
             </p>
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-primary/10 border border-primary/20 rounded-lg">
+              <Shield className="w-3.5 h-3.5 text-primary" />
+              <span className="text-xs font-semibold text-primary">100% Discreto y Seguro</span>
+            </div>
           </div>
 
           {/* Right Section - Links Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="lg:col-span-7 grid grid-cols-2 sm:grid-cols-4 gap-6 lg:gap-8">
             {/* Legal */}
             <div>
               <h3 className="font-semibold text-foreground mb-3 text-sm">Legal</h3>
               <ul className="space-y-2">
                 <li>
-                  <Link href="#" className="text-accent hover:text-accent/80 text-sm transition">
-                    Términos y Condiciones
+                  <Link href="#" className="text-muted-foreground hover:text-primary text-sm transition-colors">
+                    Términos
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-accent hover:text-accent/80 text-sm transition">
-                    Política de Privacidad
+                  <Link href="#" className="text-muted-foreground hover:text-primary text-sm transition-colors">
+                    Privacidad
                   </Link>
                 </li>
               </ul>
@@ -50,17 +56,17 @@ export default function Footer() {
               <h3 className="font-semibold text-foreground mb-3 text-sm">Soporte</h3>
               <ul className="space-y-2">
                 <li>
-                  <Link href="#" className="text-accent hover:text-accent/80 text-sm transition">
-                    Contáctanos
+                  <Link href="#" className="text-muted-foreground hover:text-primary text-sm transition-colors">
+                    Contacto
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-accent hover:text-accent/80 text-sm transition">
-                    Centro de Ayuda
+                  <Link href="#" className="text-muted-foreground hover:text-primary text-sm transition-colors">
+                    Ayuda
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-accent hover:text-accent/80 text-sm transition">
+                  <Link href="#" className="text-muted-foreground hover:text-primary text-sm transition-colors">
                     Blog
                   </Link>
                 </li>
@@ -72,12 +78,12 @@ export default function Footer() {
               <h3 className="font-semibold text-foreground mb-3 text-sm">Seguridad</h3>
               <ul className="space-y-2">
                 <li>
-                  <Link href="#" className="text-accent hover:text-accent/80 text-sm transition">
-                    Reporte de Abuso
+                  <Link href="#" className="text-muted-foreground hover:text-primary text-sm transition-colors">
+                    Reportar
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-accent hover:text-accent/80 text-sm transition">
+                  <Link href="#" className="text-muted-foreground hover:text-primary text-sm transition-colors">
                     Verificación
                   </Link>
                 </li>
@@ -89,13 +95,13 @@ export default function Footer() {
               <h3 className="font-semibold text-foreground mb-3 text-sm">Compañía</h3>
               <ul className="space-y-2">
                 <li>
-                  <Link href="#" className="text-accent hover:text-accent/80 text-sm transition">
+                  <Link href="#" className="text-muted-foreground hover:text-primary text-sm transition-colors">
                     Acerca de
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-accent hover:text-accent/80 text-sm transition">
-                    Blog
+                  <Link href="#" className="text-muted-foreground hover:text-primary text-sm transition-colors">
+                    Novedades
                   </Link>
                 </li>
               </ul>
@@ -103,51 +109,72 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* CTA and Features */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8 pb-8 border-b border-border">
-          <div>
-            <h3 className="font-semibold text-foreground mb-3">Comienza Ahora</h3>
-            <button className="w-full bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-primary-foreground font-semibold py-2.5 px-4 rounded-lg transition flex items-center justify-center gap-2 shadow-md dark:shadow-lg">
+        {/* CTA Section */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pb-8 border-b border-border/40">
+          <div className="p-6 bg-gradient-to-br from-primary/5 to-secondary/5 rounded-2xl border border-border/50">
+            <h3 className="font-semibold text-foreground mb-2">Comienza Ahora</h3>
+            <p className="text-sm text-muted-foreground mb-4">Publica tu anuncio de forma segura</p>
+            <button className="w-full bg-gradient-to-r from-primary via-primary to-secondary text-primary-foreground font-semibold py-2.5 px-4 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 flex items-center justify-center gap-2">
               <Upload className="w-4 h-4" />
               PUBLICAR ANUNCIO
             </button>
           </div>
-          <div>
-            <h3 className="font-semibold text-foreground mb-3">Contactos Soportados</h3>
-            <div className="text-sm text-muted-foreground flex items-center gap-4">
-              <span className="flex items-center gap-1">
-                ✓ <Mail className="w-4 h-4" /> Email
-              </span>
-              <span className="flex items-center gap-1">
-                ✓ <Phone className="w-4 h-4" /> Teléfono
-              </span>
-              <span className="flex items-center gap-1">
-                ✓ <Shield className="w-4 h-4" /> Privado
-              </span>
+          <div className="p-6 bg-card rounded-2xl border border-border/50">
+            <h3 className="font-semibold text-foreground mb-2">Contactos Soportados</h3>
+            <p className="text-sm text-muted-foreground mb-4">Elige cómo quieres conectar</p>
+            <div className="flex flex-wrap gap-3 text-sm">
+              <div className="flex items-center gap-1.5 px-3 py-1.5 bg-muted/50 rounded-lg">
+                <Mail className="w-3.5 h-3.5 text-primary" />
+                <span className="text-foreground">Email</span>
+              </div>
+              <div className="flex items-center gap-1.5 px-3 py-1.5 bg-muted/50 rounded-lg">
+                <Phone className="w-3.5 h-3.5 text-primary" />
+                <span className="text-foreground">Teléfono</span>
+              </div>
+              <div className="flex items-center gap-1.5 px-3 py-1.5 bg-muted/50 rounded-lg">
+                <Shield className="w-3.5 h-3.5 text-primary" />
+                <span className="text-foreground">WhatsApp</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="bg-muted/40 dark:bg-gradient-to-r dark:from-primary/10 dark:to-secondary/10 border-t border-border py-6">
-        <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
-          {/* Social Icons */}
-          <div className="flex gap-4 order-2 md:order-1">
-            <a href="#" className="text-muted-foreground hover:text-accent transition" aria-label="Email">
-              <Mail size={20} />
-            </a>
-            <a href="#" className="text-muted-foreground hover:text-accent transition" aria-label="Soporte">
-              <Shield size={20} />
-            </a>
+      {/* Bottom Bar */}
+      <div className="border-t border-border/40 bg-muted/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+            {/* Social Icons */}
+            <div className="flex gap-3 order-2 sm:order-1">
+              <a
+                href="#"
+                className="p-2 text-muted-foreground hover:text-primary hover:bg-primary/10 rounded-lg transition-all"
+                aria-label="Email"
+              >
+                <Mail size={18} />
+              </a>
+              <a
+                href="#"
+                className="p-2 text-muted-foreground hover:text-primary hover:bg-primary/10 rounded-lg transition-all"
+                aria-label="Soporte"
+              >
+                <Shield size={18} />
+              </a>
+            </div>
+
+            {/* Copyright */}
+            <p className="text-xs text-muted-foreground order-1 sm:order-2">
+              © 2025 Damas de Compañía Bolivia. Todos los derechos reservados.
+            </p>
+
+            {/* Back to Top */}
+            <button
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              className="text-xs text-muted-foreground hover:text-primary transition-colors order-3 flex items-center gap-1 px-3 py-1.5 hover:bg-primary/10 rounded-lg"
+            >
+              ↑ Arriba
+            </button>
           </div>
-
-          {/* Copyright */}
-          <p className="text-xs text-muted-foreground order-1 md:order-2">
-            © 2025 Tablón Discreto. Plataforma segura para anuncios de adultos.
-          </p>
-
-          {/* Back to Top */}
-          <button className="text-xs text-muted-foreground hover:text-accent transition order-3">↑ Arriba</button>
         </div>
       </div>
     </footer>
