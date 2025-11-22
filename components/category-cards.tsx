@@ -9,7 +9,7 @@ const categories = [
     id: 1,
     name: "Mujeres",
     slug: "mujeres",
-    description: "Acompañantes verificadas con total discreción",
+    description: "Encuentra en Bolivia a las mejores escorts que te ofrecen gran variedad de servicios eróticos.",
     image: "https://bo.skokka.com/static/assets/womenseekmen_repr.09bc5c7b4ed7201892f6.jpg",
     icon: Heart,
     stats: "500+",
@@ -24,7 +24,7 @@ const categories = [
     id: 2,
     name: "Trans",
     slug: "trans",
-    description: "Perfiles verificados y contacto seguro",
+    description: "Atrévete a probar todas las aristas del placer con las más sexys trans y travestis de Bolivia",
     image: "/images/category-trans.jpg",
     icon: Sparkles,
     stats: "150+",
@@ -39,7 +39,7 @@ const categories = [
     id: 3,
     name: "Hombres",
     slug: "hombres",
-    description: "Acompañantes profesionales en tu zona",
+    description: "Encuentra escorts y acompañantes masculinos en Bolivia. Disfruta de encuentros con hombres.",
     image: "/images/category-hombres.jpg",
     icon: User,
     stats: "80+",
@@ -54,7 +54,7 @@ const categories = [
     id: 4,
     name: "Parejas",
     slug: "parejas",
-    description: "Experiencias compartidas en ambiente seguro",
+    description: "Encontrar citas y encuentros eróticos con quienes descubrir tu lado más ardiente.",
     image: "/images/category-parejas.jpg",
     icon: Users,
     stats: "60+",
@@ -77,11 +77,12 @@ export default function CategoryCards() {
         {/* Header */}
         <div className="text-center mb-14">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Explora por{" "}
-            <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Categoría</span>
+            Encuentros calientes en tu 
+
+            <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"> Ciudad</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-xl mx-auto">
-            Encuentra exactamente lo que buscas
+          ¡Selecciona la ciudad o categoría que más te guste!
           </p>
         </div>
 

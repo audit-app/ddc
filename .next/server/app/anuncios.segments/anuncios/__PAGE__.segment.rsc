@@ -1,0 +1,6 @@
+1:"$Sreact.fragment"
+2:I[29038,["/_next/static/chunks/14020c07f85e2a99.js","/_next/static/chunks/18634327f517f936.js","/_next/static/chunks/4b79f4bfe4575d37.js","/_next/static/chunks/8b0798c2a74519fd.js"],"default"]
+3:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/247eb132b7f7b574.js"],"OutletBoundary"]
+4:"$Sreact.suspense"
+0:{"buildId":"fgP3fr-MrkSlGsH1kgsXs","rsc":["$","$1","c",{"children":[[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"ItemList\",\"name\":\"Anuncios Clasificados Bolivia\",\"description\":\"Listado de anuncios clasificados para adultos en Bolivia\",\"itemListOrder\":\"https://schema.org/ItemListOrderDescending\",\"numberOfItems\":\"500+\"}"}}],["$","$L2",null,{}]],[["$","script","script-0",{"src":"/_next/static/chunks/18634327f517f936.js","async":true}],["$","script","script-1",{"src":"/_next/static/chunks/4b79f4bfe4575d37.js","async":true}],["$","script","script-2",{"src":"/_next/static/chunks/8b0798c2a74519fd.js","async":true}]],["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"loading":null,"isPartial":false}
+5:null

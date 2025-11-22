@@ -67,7 +67,7 @@ export default function CategoryFilter({ category = "Viajeras" }: CategoryFilter
               <div className="p-2.5 bg-gradient-to-br from-primary to-secondary rounded-xl">
                 <Plane className="w-5 h-5 text-primary-foreground" />
               </div>
-              <span className="text-sm font-bold text-primary uppercase tracking-wider">{category}</span>
+              <span className="text-sm font-bold text-primary uppercase tracking-wider">Scorts</span>
             </div>
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground">
               Explora por <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Ciudad</span>

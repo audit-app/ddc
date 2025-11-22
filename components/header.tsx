@@ -38,7 +38,7 @@ export default function Header() {
               <User className="w-5 h-5" aria-hidden="true" />
             </button>
             <Link
-              href="/publicar"
+              href="#"
               className="relative group bg-gradient-to-r from-primary to-secondary text-primary-foreground px-4 sm:px-5 py-2.5 rounded-xl font-semibold text-sm shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-all duration-300 flex items-center gap-2 overflow-hidden"
             >
               <span className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />

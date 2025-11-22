@@ -24,7 +24,8 @@ export default function Footer() {
               </div>
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed mb-5 max-w-xs">
-              Plataforma segura y discreta para conectar. Tu privacidad es nuestra prioridad.
+            
+Damas de compañia es la mayor plataforma de anuncios para escorts independientes en toda Bolivia. Navega entre miles de nuevos anuncios de escorts calientes a nivel nacional. Disponible en los 9 departamentos.
             </p>
             <div className="flex items-center gap-3">
               <div className="flex items-center gap-1.5 px-3 py-1.5 bg-primary/10 rounded-lg border border-primary/20">

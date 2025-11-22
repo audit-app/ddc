@@ -52,7 +52,7 @@ export default function Hero() {
 
             {/* Subtitle */}
             <p className="text-lg sm:text-xl text-muted-foreground mb-8 max-w-lg leading-relaxed">
-              Conecta de forma segura y directa con perfiles verificados. Tu privacidad es nuestra prioridad.
+              Conecta de forma segura y celebra el deseo, sin limites y con total discreción. 
             </p>
 
             {/* Search Button */}
