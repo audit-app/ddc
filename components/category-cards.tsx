@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image"
-import { Heart, Users, Sparkles, User, MapPin, ChevronRight } from "lucide-react"
+import { Heart, Users, Sparkles, User, ArrowRight } from "lucide-react"
 import Link from "next/link"
 
 const categories = [
@@ -9,11 +9,11 @@ const categories = [
     id: 1,
     name: "Mujeres",
     slug: "mujeres",
-    description:
-      "Encuentros con mujeres verificadas. Acompañantes, masajes y servicios personalizados con total discreción.",
+    description: "Acompañantes verificadas con total discreción",
     image: "https://bo.skokka.com/static/assets/womenseekmen_repr.09bc5c7b4ed7201892f6.jpg",
     icon: Heart,
-    stats: "500+ anuncios",
+    stats: "500+",
+    gradient: "from-pink-500 to-rose-500",
     locations: [
       { city: "La Paz", count: 180 },
       { city: "Cochabamba", count: 150 },
@@ -24,11 +24,11 @@ const categories = [
     id: 2,
     name: "Trans",
     slug: "trans",
-    description:
-      "Anuncios de trans y travestis en Bolivia. Compañía auténtica con perfiles verificados y contacto seguro.",
+    description: "Perfiles verificados y contacto seguro",
     image: "/images/category-trans.jpg",
     icon: Sparkles,
-    stats: "150+ anuncios",
+    stats: "150+",
+    gradient: "from-purple-500 to-violet-500",
     locations: [
       { city: "Santa Cruz", count: 65 },
       { city: "La Paz", count: 45 },
@@ -39,10 +39,11 @@ const categories = [
     id: 3,
     name: "Hombres",
     slug: "hombres",
-    description: "Servicios masculinos para encuentros discretos. Gigolos y acompañantes profesionales en tu zona.",
+    description: "Acompañantes profesionales en tu zona",
     image: "/images/category-hombres.jpg",
     icon: User,
-    stats: "80+ anuncios",
+    stats: "80+",
+    gradient: "from-blue-500 to-indigo-500",
     locations: [
       { city: "La Paz", count: 35 },
       { city: "Santa Cruz", count: 28 },
@@ -53,10 +54,11 @@ const categories = [
     id: 4,
     name: "Parejas",
     slug: "parejas",
-    description: "Parejas liberales y swingers. Encuentros únicos y experiencias compartidas en un ambiente seguro.",
+    description: "Experiencias compartidas en ambiente seguro",
     image: "/images/category-parejas.jpg",
     icon: Users,
-    stats: "60+ anuncios",
+    stats: "60+",
+    gradient: "from-amber-500 to-orange-500",
     locations: [
       { city: "Santa Cruz", count: 25 },
       { city: "Cochabamba", count: 20 },
@@ -67,118 +69,99 @@ const categories = [
 
 export default function CategoryCards() {
   return (
-    <section className="relative py-20 sm:py-24 overflow-hidden">
-      {/* Background decorative elements */}
+    <section className="relative py-20 sm:py-28 overflow-hidden">
+      {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-muted/5 to-background" />
-      <div className="absolute top-1/4 left-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl opacity-20" />
-      <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-secondary/10 rounded-full blur-3xl opacity-20" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 backdrop-blur-sm border border-primary/20 mb-6">
-            <Sparkles className="w-4 h-4 text-primary" />
-            <span className="text-sm font-semibold text-primary">Tu privacidad, nuestra prioridad</span>
-          </div>
-
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4 text-balance">
-            Encuentros discretos en{" "}
-            <span className="text-primary">tu ciudad</span>
+        {/* Header */}
+        <div className="text-center mb-14">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4">
+            Explora por{" "}
+            <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Categoría</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Plataforma segura y elegante para conectar de forma privada
+          <p className="text-lg text-muted-foreground max-w-xl mx-auto">
+            Encuentra exactamente lo que buscas
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+        {/* Cards Grid - Image focused */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {categories.map((category) => {
             const Icon = category.icon
             return (
-              <div
+              <Link
                 key={category.id}
-                className="group relative rounded-3xl overflow-hidden transition-all duration-500 hover:scale-[1.02]"
+                href={`/anuncios?categoria=${category.slug}`}
+                className="group relative rounded-2xl overflow-hidden aspect-[3/4] cursor-pointer"
               >
-                {/* Glow effect on hover */}
-                <div className="absolute -inset-1 bg-primary rounded-3xl opacity-0 group-hover:opacity-25 blur-xl transition-opacity duration-500" />
+                {/* Background Image */}
+                <Image
+                  src={category.image}
+                  alt={category.name}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
+                  loading="lazy"
+                />
 
-                {/* Card container */}
-                <div className="relative bg-card/90 backdrop-blur-xl border border-white/10 shadow-2xl shadow-primary/5 rounded-3xl overflow-hidden">
+                {/* Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
 
-                  {/* Image section - prominent */}
-                  <div className="relative h-48 sm:h-56 overflow-hidden">
-                    <Image
-                      src={category.image}
-                      alt={`Categoría ${category.name} - Anuncios clasificados`}
-                      fill
-                      sizes="(max-width: 768px) 100vw, 50vw"
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
-                      loading="lazy"
-                    />
-                    {/* Overlay for text readability */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent" />
+                {/* Hover Glow */}
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-                    {/* Stats badge on image */}
-                    <div className="absolute top-4 right-4 px-3 py-1.5 rounded-full bg-background/80 backdrop-blur-xl border border-white/20 shadow-lg">
-                      <span className="text-xs font-bold text-primary">{category.stats}</span>
-                    </div>
+                {/* Stats Badge */}
+                <div className="absolute top-4 right-4 px-2.5 py-1 rounded-lg bg-white/15 backdrop-blur-md border border-white/20">
+                  <span className="text-xs font-bold text-white">{category.stats}</span>
+                </div>
 
-                    {/* Icon badge on image */}
-                    <div className="absolute top-4 left-4 inline-flex items-center justify-center w-12 h-12 rounded-xl bg-background/80 backdrop-blur-xl border border-white/20 shadow-lg">
-                      <Icon className="w-6 h-6 text-primary" />
-                    </div>
-
-                    {/* Title overlay on image */}
-                    <div className="absolute bottom-0 left-0 right-0 p-5">
-                      <h3 className="text-2xl sm:text-3xl font-bold text-foreground drop-shadow-lg">
-                        {category.name}
-                      </h3>
-                    </div>
+                {/* Content */}
+                <div className="absolute bottom-0 left-0 right-0 p-5">
+                  {/* Icon */}
+                  <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${category.gradient} flex items-center justify-center mb-3 shadow-lg`}>
+                    <Icon className="w-5 h-5 text-white" />
                   </div>
 
-                  {/* Content section */}
-                  <div className="p-5 sm:p-6 space-y-4">
-                    {/* Description */}
-                    <p className="text-sm text-muted-foreground leading-relaxed">{category.description}</p>
+                  {/* Title */}
+                  <h3 className="text-xl font-bold text-white mb-1 group-hover:text-primary transition-colors">
+                    {category.name}
+                  </h3>
 
-                    {/* Locations list - like original style */}
-                    <div className="space-y-2">
-                      {category.locations.map((location, idx) => (
-                        <Link
-                          key={idx}
-                          href={`/anuncios?categoria=${category.slug}&ciudad=${location.city.toLowerCase().replace(' ', '-')}`}
-                          className="group/item flex items-center justify-between p-3 rounded-xl bg-background/50 backdrop-blur-sm border border-white/10 hover:border-primary/30 hover:bg-primary/5 transition-all duration-300"
-                        >
-                          <div className="flex items-center gap-3">
-                            <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center group-hover/item:bg-primary/20 transition-colors">
-                              <MapPin className="w-4 h-4 text-primary" />
-                            </div>
-                            <span className="text-sm font-medium text-foreground/90 group-hover/item:text-primary transition-colors">
-                              {location.city}
-                            </span>
-                          </div>
-                          <div className="flex items-center gap-2">
-                            <span className="text-xs font-semibold text-muted-foreground bg-muted/50 px-2 py-1 rounded-md">
-                              {location.count} anuncios
-                            </span>
-                            <ChevronRight className="w-4 h-4 text-muted-foreground group-hover/item:text-primary group-hover/item:translate-x-0.5 transition-all" />
-                          </div>
-                        </Link>
-                      ))}
-                    </div>
+                  {/* Description */}
+                  <p className="text-sm text-white/70 mb-3 line-clamp-2">
+                    {category.description}
+                  </p>
 
-                    {/* CTA button */}
-                    <Link
-                      href={`/anuncios?categoria=${category.slug}`}
-                      className="w-full block rounded-xl bg-primary px-6 py-3.5 text-center transition-all duration-300 hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/30"
-                    >
-                      <span className="text-sm font-bold text-primary-foreground tracking-wide">
-                        Ver todos en {category.name}
+                  {/* Cities */}
+                  <div className="flex flex-wrap gap-1.5 mb-3">
+                    {category.locations.slice(0, 3).map((loc, idx) => (
+                      <span key={idx} className="text-[10px] font-medium text-white/60 bg-white/10 px-2 py-0.5 rounded-full">
+                        {loc.city}
                       </span>
-                    </Link>
+                    ))}
+                  </div>
+
+                  {/* CTA */}
+                  <div className="flex items-center gap-2 text-sm font-semibold text-primary opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+                    <span>Ver anuncios</span>
+                    <ArrowRight className="w-4 h-4" />
                   </div>
                 </div>
-              </div>
+              </Link>
             )
           })}
+        </div>
+
+        {/* Bottom CTA */}
+        <div className="mt-12 text-center">
+          <Link
+            href="/anuncios"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-card border border-border/50 hover:border-primary/50 rounded-xl font-semibold text-foreground hover:text-primary transition-all duration-300 shadow-lg hover:shadow-xl"
+          >
+            <span>Ver todos los anuncios</span>
+            <ArrowRight className="w-4 h-4" />
+          </Link>
         </div>
       </div>
     </section>

@@ -144,3 +144,16 @@ For more information, see https://radix-ui.com/primitives/docs/components/dialog
 [01:46:17.366] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763777451071}
 [01:48:56.591] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
 [01:48:56.591] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[00:29:43.985] Server  LOG      ✓ Compiled in 1121ms
+[00:30:47.826] Server  LOG      ✓ Compiled in 438ms
+[00:32:00.718] Server  LOG      ✓ Compiled in 348ms
+[00:32:49.926] Server  LOG      ✓ Compiled in 310ms
+[00:33:12.114] Server  LOG      ✓ Compiled in 480ms
+[00:34:14.051] Server  LOG      ✓ Compiled in 363ms
+[00:35:22.450] Server  LOG      ✓ Compiled in 424ms
+[00:37:43.163] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/anuncios color: rgb(120, 120, 120) color: inherit {"dp":"/anuncios","o":"http://localhost:3000/anuncios","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763785900143}
+[00:37:50.398] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763785906864}
+[00:57:56.617] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/anuncios?ciudad=el-alto color: rgb(120, 120, 120) color: inherit {"dp":"/anuncios","o":"http://localhost:3000/anuncios?ciudad=el-alto","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763787012475}
+[00:58:05.693] Server  ERROR    ⨯ "upstream image response failed for" "https://bo.skokka.com/image/post/27/d2/27d284b7bf6a4c218e385975cafed58a.jpg" 404
+[00:58:18.035] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/anuncios/joven-gay-pasivo-ofrese-sus-servicio-a-hombres-sin-lios-a-nada color: rgb(120, 120, 120) color: inherit {"dp":"/anuncios/[id]","o":"http://localhost:3000/anuncios/joven-gay-pasivo-ofrese-sus-servicio-a-hombres-sin-lios-a-nada","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763787032104}
+[02:38:57.979] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763824855482}

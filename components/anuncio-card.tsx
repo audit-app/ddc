@@ -1,8 +1,7 @@
 "use client"
 
 import Image from "next/image"
-import { MapPin, Calendar, Eye, CheckCircle2 } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { MapPin, Eye, CheckCircle2, Sparkles } from "lucide-react"
 import type { Anuncio } from "@/lib/anuncios-data"
 
 interface AnuncioCardProps {
@@ -14,10 +13,10 @@ export default function AnuncioCard({ anuncio, onOpen }: AnuncioCardProps) {
   return (
     <div
       onClick={() => onOpen(anuncio)}
-      className="group cursor-pointer overflow-hidden rounded-2xl border border-border/50 bg-card hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300"
+      className="group cursor-pointer overflow-hidden rounded-2xl bg-card border border-border/40 hover:border-primary/40 shadow-sm hover:shadow-xl hover:shadow-primary/10 transition-all duration-300"
     >
-      {/* Imagen */}
-      <div className="relative h-56 overflow-hidden bg-muted">
+      {/* Imagen - más prominente */}
+      <div className="relative aspect-[4/5] overflow-hidden">
         {anuncio.fotos.length > 0 ? (
           <>
             <Image
@@ -26,58 +25,59 @@ export default function AnuncioCard({ anuncio, onOpen }: AnuncioCardProps) {
               fill
               className="object-cover transition-transform duration-500 group-hover:scale-105"
             />
+            {/* Overlay gradient */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+
+            {/* Badge verificado */}
             {anuncio.verificado && (
-              <div className="absolute top-3 right-3 px-2.5 py-1 bg-primary/90 backdrop-blur-sm rounded-lg border border-primary-foreground/20 flex items-center gap-1.5">
-                <CheckCircle2 className="w-3.5 h-3.5 text-primary-foreground" />
-                <span className="text-xs font-semibold text-primary-foreground">Verificado</span>
+              <div className="absolute top-3 left-3 px-2 py-1 bg-primary/90 backdrop-blur-sm rounded-lg flex items-center gap-1">
+                <CheckCircle2 className="w-3 h-3 text-primary-foreground" />
+                <span className="text-[10px] font-bold text-primary-foreground uppercase tracking-wide">Verificado</span>
               </div>
             )}
+
+            {/* Vistas badge */}
+            {anuncio.vistas && (
+              <div className="absolute top-3 right-3 px-2 py-1 bg-black/50 backdrop-blur-sm rounded-lg flex items-center gap-1">
+                <Eye className="w-3 h-3 text-white/80" />
+                <span className="text-[10px] font-medium text-white/80">{anuncio.vistas}</span>
+              </div>
+            )}
+
+            {/* Contenido sobre imagen */}
+            <div className="absolute bottom-0 left-0 right-0 p-4">
+              {/* Ciudad */}
+              <div className="flex items-center gap-1 mb-2">
+                <MapPin className="w-3 h-3 text-primary" />
+                <span className="text-xs font-medium text-white/90">{anuncio.city}</span>
+              </div>
+
+              {/* Título */}
+              <h3 className="text-base font-bold text-white leading-tight line-clamp-2 group-hover:text-primary transition-colors">
+                {anuncio.title}
+              </h3>
+            </div>
           </>
         ) : (
-          <div className="flex h-full items-center justify-center bg-primary/5">
-            <span className="text-muted-foreground text-sm">Sin imagen</span>
+          <div className="flex h-full items-center justify-center bg-muted">
+            <Sparkles className="w-8 h-8 text-muted-foreground/30" />
           </div>
         )}
-        <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       </div>
 
-      {/* Contenido */}
-      <div className="p-5 space-y-4">
-        <div className="space-y-2">
-          <h3 className="line-clamp-2 text-lg font-bold text-foreground group-hover:text-primary transition-colors leading-tight">
-            {anuncio.title}
-          </h3>
-          <p className="line-clamp-2 text-sm text-muted-foreground leading-relaxed">{anuncio.anuncio}</p>
-        </div>
+      {/* Footer minimalista */}
+      <div className="p-3 bg-card border-t border-border/30">
+        <p className="text-xs text-muted-foreground line-clamp-2 leading-relaxed">
+          {anuncio.anuncio}
+        </p>
 
-        {/* Info */}
-        <div className="flex items-center justify-between text-xs text-muted-foreground border-t border-border/50 pt-4">
-          <div className="flex items-center gap-1.5">
-            <MapPin className="h-3.5 w-3.5 text-primary" />
-            <span className="font-medium">{anuncio.city}</span>
+        {/* Precio si existe */}
+        {anuncio.precio && (
+          <div className="mt-2 pt-2 border-t border-border/30 flex items-center justify-between">
+            <span className="text-sm font-bold text-primary">Bs. {anuncio.precio}</span>
+            <span className="text-[10px] text-muted-foreground">{anuncio.date}</span>
           </div>
-          {anuncio.vistas && (
-            <div className="flex items-center gap-1.5">
-              <Eye className="h-3.5 w-3.5" />
-              <span>{anuncio.vistas}</span>
-            </div>
-          )}
-          <div className="flex items-center gap-1.5">
-            <Calendar className="h-3.5 w-3.5" />
-            <span>{anuncio.date}</span>
-          </div>
-        </div>
-
-        {/* Botón */}
-        <Button
-          onClick={(e) => {
-            e.stopPropagation()
-            onOpen(anuncio)
-          }}
-          className="w-full bg-primary hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/20 transition-all duration-300 font-semibold"
-        >
-          Ver Detalle
-        </Button>
+        )}
       </div>
     </div>
   )
