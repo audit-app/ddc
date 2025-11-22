@@ -26,6 +26,7 @@ import {
 } from "lucide-react"
 
 import type { Anuncio } from "@/lib/anuncios-data"
+import { formatNumber, formatCurrency } from "@/lib/utils"
 
 export default function AnuncioDetailClient({ anuncio }: { anuncio: Anuncio }) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
@@ -297,7 +298,7 @@ export default function AnuncioDetailClient({ anuncio }: { anuncio: Anuncio }) {
                 {anuncio.vistas && (
                   <div className="p-4 bg-background/50 rounded-xl">
                     <p className="text-xs text-muted-foreground mb-1">Vistas</p>
-                    <p className="font-bold text-foreground">{anuncio.vistas.toLocaleString()}</p>
+                    <p className="font-bold text-foreground">{formatNumber(anuncio.vistas)}</p>
                   </div>
                 )}
                 <div className="p-4 bg-background/50 rounded-xl">
@@ -371,10 +372,7 @@ export default function AnuncioDetailClient({ anuncio }: { anuncio: Anuncio }) {
                 <div className="bg-gradient-to-br from-primary/20 to-secondary/20 backdrop-blur-sm rounded-2xl p-6 border border-primary/20">
                   <p className="text-sm text-muted-foreground mb-1">Precio</p>
                   <p className="text-3xl font-bold text-primary">
-                    {new Intl.NumberFormat("es-BO", {
-                      style: "currency",
-                      currency: "BOB",
-                    }).format(anuncio.precio)}
+                    {formatCurrency(anuncio.precio)}
                   </p>
                 </div>
               )}

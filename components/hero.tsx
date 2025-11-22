@@ -11,7 +11,7 @@ export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-background via-background to-muted/10" aria-label="Sección principal">
       {/* Background Image with Overlay - optimized */}
-      <div className="absolute inset-0 opacity-10 dark:opacity-5">
+      <div className="absolute inset-0 ">
         <Image
           src="/images/hero-bg.webp"
           alt=""

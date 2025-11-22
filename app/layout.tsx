@@ -12,36 +12,50 @@ const geist = Geist({
 })
 
 export const metadata: Metadata = {
-  title: "Tablón de Anuncios para Adultos | Contacto Directo y Seguro",
+  title: {
+    default: "Damas de Compañía Bolivia | Escorts y Acompañantes Verificadas",
+    template: "%s | Damas de Compañía Bolivia",
+  },
   description:
-    "Plataforma discreta de anuncios para adultos. Publica tu anuncio con contacto directo (email o teléfono) de forma segura y confidencial. Encuentra y conecta fácilmente.",
-  keywords: "anuncios adultos, contacto directo, encuentros, plataforma discreta, anuncios clasificados, Bolivia",
-  generator: "v0.app",
+    "Encuentra damas de compañía y escorts verificadas en Bolivia. Acompañantes en La Paz, Santa Cruz, Cochabamba. Contacto directo por WhatsApp. Plataforma segura y discreta.",
+  keywords: [
+    "damas de compañía bolivia",
+    "escorts bolivia",
+    "acompañantes la paz",
+    "escorts santa cruz",
+    "escorts cochabamba",
+    "acompañantes verificadas",
+    "encuentros discretos",
+    "contacto whatsapp",
+  ],
+  authors: [{ name: "Damas de Compañía Bolivia" }],
+  creator: "Damas de Compañía Bolivia",
+  publisher: "Damas de Compañía Bolivia",
   openGraph: {
-    title: "Tablón de Anuncios para Adultos | Contacto Directo y Seguro",
-    description: "Publica y encuentra anuncios con contacto directo. Plataforma segura y discreta.",
+    title: "Damas de Compañía Bolivia | Escorts y Acompañantes",
+    description:
+      "Encuentra damas de compañía y escorts verificadas en Bolivia. Contacto directo y seguro.",
     type: "website",
     locale: "es_BO",
-    siteName: "Tablón de Anuncios",
+    siteName: "Damas de Compañía Bolivia",
     images: [
       {
-        url: "/marketplace-platform.jpg",
+        url: "/og-image.png",
         width: 1200,
-        height: 1200,
-        alt: "Tablón de Anuncios para Adultos",
+        height: 630,
+        alt: "Damas de Compañía Bolivia",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tablón de Anuncios para Adultos",
-    description: "Publica y encuentra anuncios con contacto directo. Plataforma segura y discreta.",
-    images: ["/marketplace-platform.jpg"],
+    title: "Damas de Compañía Bolivia",
+    description: "Escorts y acompañantes verificadas en Bolivia. Contacto directo por WhatsApp.",
+    images: ["/og-image.png"],
   },
   robots: {
     index: true,
     follow: true,
-    nocache: false,
     googleBot: {
       index: true,
       follow: true,
@@ -50,27 +64,18 @@ export const metadata: Metadata = {
       "max-video-preview": -1,
     },
   },
-  metadataBase: new URL("https://skokka.com"),
+  metadataBase: new URL("https://damasdecompania.bo"),
   alternates: {
-    canonical: "https://skokka.com",
+    canonical: "/",
   },
   icons: {
     icon: [
-      {
-        url: "/icon-light-32x32.png",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "/icon-dark-32x32.png",
-        media: "(prefers-color-scheme: dark)",
-      },
-      {
-        url: "/icon.svg",
-        type: "image/svg+xml",
-      },
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.svg", type: "image/svg+xml" },
     ],
-    apple: "/apple-icon.png",
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
   },
+  manifest: "/manifest.json",
 }
 
 export default function RootLayout({

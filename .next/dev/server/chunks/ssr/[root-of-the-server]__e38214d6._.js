@@ -82,37 +82,54 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$theme$2d$provi
 ;
 ;
 const metadata = {
-    title: "Tablón de Anuncios para Adultos | Contacto Directo y Seguro",
-    description: "Plataforma discreta de anuncios para adultos. Publica tu anuncio con contacto directo (email o teléfono) de forma segura y confidencial. Encuentra y conecta fácilmente.",
-    keywords: "anuncios adultos, contacto directo, encuentros, plataforma discreta, anuncios clasificados, Bolivia",
-    generator: "v0.app",
+    title: {
+        default: "Damas de Compañía Bolivia | Escorts y Acompañantes Verificadas",
+        template: "%s | Damas de Compañía Bolivia"
+    },
+    description: "Encuentra damas de compañía y escorts verificadas en Bolivia. Acompañantes en La Paz, Santa Cruz, Cochabamba. Contacto directo por WhatsApp. Plataforma segura y discreta.",
+    keywords: [
+        "damas de compañía bolivia",
+        "escorts bolivia",
+        "acompañantes la paz",
+        "escorts santa cruz",
+        "escorts cochabamba",
+        "acompañantes verificadas",
+        "encuentros discretos",
+        "contacto whatsapp"
+    ],
+    authors: [
+        {
+            name: "Damas de Compañía Bolivia"
+        }
+    ],
+    creator: "Damas de Compañía Bolivia",
+    publisher: "Damas de Compañía Bolivia",
     openGraph: {
-        title: "Tablón de Anuncios para Adultos | Contacto Directo y Seguro",
-        description: "Publica y encuentra anuncios con contacto directo. Plataforma segura y discreta.",
+        title: "Damas de Compañía Bolivia | Escorts y Acompañantes",
+        description: "Encuentra damas de compañía y escorts verificadas en Bolivia. Contacto directo y seguro.",
         type: "website",
         locale: "es_BO",
-        siteName: "Tablón de Anuncios",
+        siteName: "Damas de Compañía Bolivia",
         images: [
             {
-                url: "/marketplace-platform.jpg",
+                url: "/og-image.png",
                 width: 1200,
-                height: 1200,
-                alt: "Tablón de Anuncios para Adultos"
+                height: 630,
+                alt: "Damas de Compañía Bolivia"
             }
         ]
     },
     twitter: {
         card: "summary_large_image",
-        title: "Tablón de Anuncios para Adultos",
-        description: "Publica y encuentra anuncios con contacto directo. Plataforma segura y discreta.",
+        title: "Damas de Compañía Bolivia",
+        description: "Escorts y acompañantes verificadas en Bolivia. Contacto directo por WhatsApp.",
         images: [
-            "/marketplace-platform.jpg"
+            "/og-image.png"
         ]
     },
     robots: {
         index: true,
         follow: true,
-        nocache: false,
         googleBot: {
             index: true,
             follow: true,
@@ -121,27 +138,29 @@ const metadata = {
             "max-video-preview": -1
         }
     },
-    metadataBase: new URL("https://skokka.com"),
+    metadataBase: new URL("https://damasdecompania.bo"),
     alternates: {
-        canonical: "https://skokka.com"
+        canonical: "/"
     },
     icons: {
         icon: [
             {
-                url: "/icon-light-32x32.png",
-                media: "(prefers-color-scheme: light)"
-            },
-            {
-                url: "/icon-dark-32x32.png",
-                media: "(prefers-color-scheme: dark)"
+                url: "/favicon.ico",
+                sizes: "any"
             },
             {
                 url: "/icon.svg",
                 type: "image/svg+xml"
             }
         ],
-        apple: "/apple-icon.png"
-    }
+        apple: [
+            {
+                url: "/apple-touch-icon.png",
+                sizes: "180x180"
+            }
+        ]
+    },
+    manifest: "/manifest.json"
 };
 function RootLayout({ children }) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("html", {
@@ -156,7 +175,7 @@ function RootLayout({ children }) {
                         media: "(prefers-color-scheme: dark)"
                     }, void 0, false, {
                         fileName: "[project]/app/layout.tsx",
-                        lineNumber: 84,
+                        lineNumber: 89,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("meta", {
@@ -165,13 +184,13 @@ function RootLayout({ children }) {
                         media: "(prefers-color-scheme: light)"
                     }, void 0, false, {
                         fileName: "[project]/app/layout.tsx",
-                        lineNumber: 85,
+                        lineNumber: 90,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/layout.tsx",
-                lineNumber: 83,
+                lineNumber: 88,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("body", {
@@ -184,24 +203,24 @@ function RootLayout({ children }) {
                         children,
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$vercel$2f$analytics$2f$dist$2f$next$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Analytics"], {}, void 0, false, {
                             fileName: "[project]/app/layout.tsx",
-                            lineNumber: 90,
+                            lineNumber: 95,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/layout.tsx",
-                    lineNumber: 88,
+                    lineNumber: 93,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/layout.tsx",
-                lineNumber: 87,
+                lineNumber: 92,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/layout.tsx",
-        lineNumber: 82,
+        lineNumber: 87,
         columnNumber: 5
     }, this);
 }
