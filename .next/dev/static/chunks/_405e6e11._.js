@@ -88,20 +88,23 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 function Header() {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("header", {
         className: "sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60",
-        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
             className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+            "aria-label": "Navegación principal",
             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "flex h-16 items-center justify-between",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                         href: "/",
-                        className: "flex items-center gap-2 group",
+                        className: "flex items-center gap-2",
+                        "aria-label": "Ir al inicio - Damas de Compañía Bolivia",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "relative w-9 h-9 bg-gradient-to-br from-primary via-primary to-secondary rounded-xl flex items-center justify-center shadow-md hover:shadow-lg transition-all duration-300 group-hover:scale-105",
+                                className: "w-9 h-9 bg-gradient-to-br from-primary via-primary to-secondary rounded-xl flex items-center justify-center shadow-md",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$heart$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Heart$3e$__["Heart"], {
                                     className: "w-5 h-5 text-primary-foreground",
-                                    fill: "currentColor"
+                                    fill: "currentColor",
+                                    "aria-hidden": "true"
                                 }, void 0, false, {
                                     fileName: "[project]/components/header.tsx",
                                     lineNumber: 14,
@@ -152,10 +155,11 @@ function Header() {
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                className: "p-2 text-muted-foreground hover:text-foreground hover:bg-accent/10 rounded-lg transition-all duration-200",
+                                className: "p-2 text-muted-foreground hover:text-foreground hover:bg-accent/10 rounded-lg transition-colors",
                                 "aria-label": "Perfil de usuario",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$user$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__User$3e$__["User"], {
-                                    className: "w-5 h-5"
+                                    className: "w-5 h-5",
+                                    "aria-hidden": "true"
                                 }, void 0, false, {
                                     fileName: "[project]/components/header.tsx",
                                     lineNumber: 31,
@@ -166,29 +170,24 @@ function Header() {
                                 lineNumber: 27,
                                 columnNumber: 13
                             }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                className: "group relative bg-gradient-to-r from-primary via-primary to-secondary text-primary-foreground px-4 sm:px-5 py-2 rounded-lg font-semibold text-sm shadow-md hover:shadow-xl hover:shadow-primary/30 transition-all duration-300 flex items-center gap-2 overflow-hidden",
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                href: "/publicar",
+                                className: "bg-gradient-to-r from-primary via-primary to-secondary text-primary-foreground px-4 sm:px-5 py-2 rounded-lg font-semibold text-sm shadow-md hover:shadow-lg transition-shadow flex items-center gap-2",
                                 children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/header.tsx",
-                                        lineNumber: 34,
-                                        columnNumber: 15
-                                    }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$plus$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Plus$3e$__["Plus"], {
-                                        className: "w-4 h-4 relative z-10"
+                                        className: "w-4 h-4",
+                                        "aria-hidden": "true"
                                     }, void 0, false, {
                                         fileName: "[project]/components/header.tsx",
-                                        lineNumber: 35,
+                                        lineNumber: 37,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        className: "hidden sm:inline relative z-10",
+                                        className: "hidden sm:inline",
                                         children: "Publicar"
                                     }, void 0, false, {
                                         fileName: "[project]/components/header.tsx",
-                                        lineNumber: 36,
+                                        lineNumber: 38,
                                         columnNumber: 15
                                     }, this)
                                 ]
@@ -896,7 +895,7 @@ var _s = __turbopack_context__.k.signature();
 ;
 ;
 ;
-function AnuncioDetailClient({ anuncio, anuncioId }) {
+function AnuncioDetailClient({ anuncio }) {
     _s();
     const [currentImageIndex, setCurrentImageIndex] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(0);
     const [copied, setCopied] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
@@ -971,7 +970,7 @@ function AnuncioDetailClient({ anuncio, anuncioId }) {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$header$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                lineNumber: 96,
+                lineNumber: 80,
                 columnNumber: 7
             }, this),
             isLightboxOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -985,12 +984,12 @@ function AnuncioDetailClient({ anuncio, anuncioId }) {
                             className: "w-6 h-6 text-white group-hover:rotate-90 transition-transform"
                         }, void 0, false, {
                             fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                            lineNumber: 107,
+                            lineNumber: 91,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                        lineNumber: 102,
+                        lineNumber: 86,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1004,12 +1003,12 @@ function AnuncioDetailClient({ anuncio, anuncioId }) {
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                            lineNumber: 112,
+                            lineNumber: 96,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                        lineNumber: 111,
+                        lineNumber: 95,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1025,17 +1024,17 @@ function AnuncioDetailClient({ anuncio, anuncioId }) {
                                 priority: true
                             }, void 0, false, {
                                 fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                lineNumber: 120,
+                                lineNumber: 104,
                                 columnNumber: 15
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                            lineNumber: 119,
+                            lineNumber: 103,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                        lineNumber: 118,
+                        lineNumber: 102,
                         columnNumber: 11
                     }, this),
                     anuncio.fotos.length > 1 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
@@ -1048,12 +1047,12 @@ function AnuncioDetailClient({ anuncio, anuncioId }) {
                                     className: "w-8 h-8 text-white group-hover:-translate-x-1 transition-transform"
                                 }, void 0, false, {
                                     fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                    lineNumber: 139,
+                                    lineNumber: 123,
                                     columnNumber: 17
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                lineNumber: 134,
+                                lineNumber: 118,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1064,12 +1063,12 @@ function AnuncioDetailClient({ anuncio, anuncioId }) {
                                     className: "w-8 h-8 text-white group-hover:translate-x-1 transition-transform"
                                 }, void 0, false, {
                                     fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                    lineNumber: 146,
+                                    lineNumber: 130,
                                     columnNumber: 17
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                lineNumber: 141,
+                                lineNumber: 125,
                                 columnNumber: 15
                             }, this)
                         ]
@@ -1087,23 +1086,23 @@ function AnuncioDetailClient({ anuncio, anuncioId }) {
                                     sizes: "64px"
                                 }, void 0, false, {
                                     fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                    lineNumber: 164,
+                                    lineNumber: 148,
                                     columnNumber: 19
                                 }, this)
                             }, idx, false, {
                                 fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                lineNumber: 155,
+                                lineNumber: 139,
                                 columnNumber: 17
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                        lineNumber: 153,
+                        lineNumber: 137,
                         columnNumber: 13
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                lineNumber: 100,
+                lineNumber: 84,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1117,7 +1116,7 @@ function AnuncioDetailClient({ anuncio, anuncioId }) {
                                 className: "w-5 h-5 group-hover:-translate-x-1 transition-transform"
                             }, void 0, false, {
                                 fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                lineNumber: 185,
+                                lineNumber: 169,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1125,13 +1124,13 @@ function AnuncioDetailClient({ anuncio, anuncioId }) {
                                 children: "Volver a anuncios"
                             }, void 0, false, {
                                 fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                lineNumber: 186,
+                                lineNumber: 170,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                        lineNumber: 181,
+                        lineNumber: 165,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1153,7 +1152,7 @@ function AnuncioDetailClient({ anuncio, anuncioId }) {
                                                 priority: true
                                             }, void 0, false, {
                                                 fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                lineNumber: 198,
+                                                lineNumber: 182,
                                                 columnNumber: 17
                                             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 className: "flex h-full items-center justify-center bg-gradient-to-br from-primary/10 to-secondary/10",
@@ -1161,12 +1160,12 @@ function AnuncioDetailClient({ anuncio, anuncioId }) {
                                                     className: "w-16 h-16 text-muted-foreground/50"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                    lineNumber: 208,
+                                                    lineNumber: 192,
                                                     columnNumber: 19
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                lineNumber: 207,
+                                                lineNumber: 191,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1177,17 +1176,17 @@ function AnuncioDetailClient({ anuncio, anuncioId }) {
                                                         className: "w-8 h-8 text-white"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                        lineNumber: 215,
+                                                        lineNumber: 199,
                                                         columnNumber: 19
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                    lineNumber: 214,
+                                                    lineNumber: 198,
                                                     columnNumber: 17
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                lineNumber: 213,
+                                                lineNumber: 197,
                                                 columnNumber: 15
                                             }, this),
                                             anuncio.fotos.length > 1 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
@@ -1203,12 +1202,12 @@ function AnuncioDetailClient({ anuncio, anuncioId }) {
                                                             className: "w-5 h-5 text-foreground"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                            lineNumber: 230,
+                                                            lineNumber: 214,
                                                             columnNumber: 21
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                        lineNumber: 222,
+                                                        lineNumber: 206,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1222,12 +1221,12 @@ function AnuncioDetailClient({ anuncio, anuncioId }) {
                                                             className: "w-5 h-5 text-foreground"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                            lineNumber: 240,
+                                                            lineNumber: 224,
                                                             columnNumber: 21
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                        lineNumber: 232,
+                                                        lineNumber: 216,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
@@ -1243,12 +1242,12 @@ function AnuncioDetailClient({ anuncio, anuncioId }) {
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                    lineNumber: 247,
+                                                    lineNumber: 231,
                                                     columnNumber: 17
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                lineNumber: 246,
+                                                lineNumber: 230,
                                                 columnNumber: 15
                                             }, this),
                                             anuncio.verificado && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1258,7 +1257,7 @@ function AnuncioDetailClient({ anuncio, anuncioId }) {
                                                         className: "w-4 h-4 text-primary-foreground"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                        lineNumber: 255,
+                                                        lineNumber: 239,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1266,19 +1265,19 @@ function AnuncioDetailClient({ anuncio, anuncioId }) {
                                                         children: "Verificado"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                        lineNumber: 256,
+                                                        lineNumber: 240,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                lineNumber: 254,
+                                                lineNumber: 238,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                        lineNumber: 193,
+                                        lineNumber: 177,
                                         columnNumber: 13
                                     }, this),
                                     anuncio.fotos.length > 1 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1295,7 +1294,7 @@ function AnuncioDetailClient({ anuncio, anuncioId }) {
                                                         sizes: "80px"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                        lineNumber: 274,
+                                                        lineNumber: 258,
                                                         columnNumber: 21
                                                     }, this),
                                                     idx === 5 && anuncio.fotos.length > 6 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1308,23 +1307,23 @@ function AnuncioDetailClient({ anuncio, anuncioId }) {
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                            lineNumber: 283,
+                                                            lineNumber: 267,
                                                             columnNumber: 25
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                        lineNumber: 282,
+                                                        lineNumber: 266,
                                                         columnNumber: 23
                                                     }, this)
                                                 ]
                                             }, idx, true, {
                                                 fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                lineNumber: 265,
+                                                lineNumber: 249,
                                                 columnNumber: 19
                                             }, this))
                                     }, void 0, false, {
                                         fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                        lineNumber: 263,
+                                        lineNumber: 247,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1335,7 +1334,7 @@ function AnuncioDetailClient({ anuncio, anuncioId }) {
                                                 children: "Descripción"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                lineNumber: 293,
+                                                lineNumber: 277,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1343,13 +1342,13 @@ function AnuncioDetailClient({ anuncio, anuncioId }) {
                                                 children: anuncio.anuncio
                                             }, void 0, false, {
                                                 fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                lineNumber: 294,
+                                                lineNumber: 278,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                        lineNumber: 292,
+                                        lineNumber: 276,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1360,7 +1359,7 @@ function AnuncioDetailClient({ anuncio, anuncioId }) {
                                                 children: "Información"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                lineNumber: 299,
+                                                lineNumber: 283,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1374,7 +1373,7 @@ function AnuncioDetailClient({ anuncio, anuncioId }) {
                                                                 children: "Edad"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                                lineNumber: 303,
+                                                                lineNumber: 287,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1385,13 +1384,13 @@ function AnuncioDetailClient({ anuncio, anuncioId }) {
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                                lineNumber: 304,
+                                                                lineNumber: 288,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                        lineNumber: 302,
+                                                        lineNumber: 286,
                                                         columnNumber: 19
                                                     }, this),
                                                     anuncio.ubicacion && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1402,7 +1401,7 @@ function AnuncioDetailClient({ anuncio, anuncioId }) {
                                                                 children: "Zona"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                                lineNumber: 309,
+                                                                lineNumber: 293,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1410,13 +1409,13 @@ function AnuncioDetailClient({ anuncio, anuncioId }) {
                                                                 children: anuncio.ubicacion
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                                lineNumber: 310,
+                                                                lineNumber: 294,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                        lineNumber: 308,
+                                                        lineNumber: 292,
                                                         columnNumber: 19
                                                     }, this),
                                                     anuncio.vistas && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1427,7 +1426,7 @@ function AnuncioDetailClient({ anuncio, anuncioId }) {
                                                                 children: "Vistas"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                                lineNumber: 315,
+                                                                lineNumber: 299,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1435,13 +1434,13 @@ function AnuncioDetailClient({ anuncio, anuncioId }) {
                                                                 children: anuncio.vistas.toLocaleString()
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                                lineNumber: 316,
+                                                                lineNumber: 300,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                        lineNumber: 314,
+                                                        lineNumber: 298,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1452,7 +1451,7 @@ function AnuncioDetailClient({ anuncio, anuncioId }) {
                                                                 children: "Fotos"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                                lineNumber: 320,
+                                                                lineNumber: 304,
                                                                 columnNumber: 19
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1460,19 +1459,19 @@ function AnuncioDetailClient({ anuncio, anuncioId }) {
                                                                 children: anuncio.fotos.length
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                                lineNumber: 321,
+                                                                lineNumber: 305,
                                                                 columnNumber: 19
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                        lineNumber: 319,
+                                                        lineNumber: 303,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                lineNumber: 300,
+                                                lineNumber: 284,
                                                 columnNumber: 15
                                             }, this),
                                             anuncio.servicios && anuncio.servicios.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1483,7 +1482,7 @@ function AnuncioDetailClient({ anuncio, anuncioId }) {
                                                         children: "Servicios"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                        lineNumber: 327,
+                                                        lineNumber: 311,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1493,24 +1492,24 @@ function AnuncioDetailClient({ anuncio, anuncioId }) {
                                                                 children: servicio
                                                             }, idx, false, {
                                                                 fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                                lineNumber: 330,
+                                                                lineNumber: 314,
                                                                 columnNumber: 23
                                                             }, this))
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                        lineNumber: 328,
+                                                        lineNumber: 312,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                lineNumber: 326,
+                                                lineNumber: 310,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                        lineNumber: 298,
+                                        lineNumber: 282,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1523,7 +1522,7 @@ function AnuncioDetailClient({ anuncio, anuncioId }) {
                                                         className: "w-5 h-5 text-primary flex-shrink-0 mt-0.5"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                        lineNumber: 345,
+                                                        lineNumber: 329,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -1531,13 +1530,13 @@ function AnuncioDetailClient({ anuncio, anuncioId }) {
                                                         children: "Consejos de seguridad"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                        lineNumber: 346,
+                                                        lineNumber: 330,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                lineNumber: 344,
+                                                lineNumber: 328,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -1548,7 +1547,7 @@ function AnuncioDetailClient({ anuncio, anuncioId }) {
                                                         children: "Realiza encuentros en lugares seguros y públicos"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                        lineNumber: 349,
+                                                        lineNumber: 333,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -1556,7 +1555,7 @@ function AnuncioDetailClient({ anuncio, anuncioId }) {
                                                         children: "Verifica la identidad antes de proceder"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                        lineNumber: 350,
+                                                        lineNumber: 334,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -1564,7 +1563,7 @@ function AnuncioDetailClient({ anuncio, anuncioId }) {
                                                         children: "Nunca adelantes dinero sin confirmación"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                        lineNumber: 351,
+                                                        lineNumber: 335,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -1572,25 +1571,25 @@ function AnuncioDetailClient({ anuncio, anuncioId }) {
                                                         children: "Informa a alguien de confianza sobre tu ubicación"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                        lineNumber: 352,
+                                                        lineNumber: 336,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                lineNumber: 348,
+                                                lineNumber: 332,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                        lineNumber: 343,
+                                        lineNumber: 327,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                lineNumber: 191,
+                                lineNumber: 175,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1606,7 +1605,7 @@ function AnuncioDetailClient({ anuncio, anuncioId }) {
                                                     children: anuncio.title
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                    lineNumber: 362,
+                                                    lineNumber: 346,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1619,14 +1618,14 @@ function AnuncioDetailClient({ anuncio, anuncioId }) {
                                                                     className: "w-4 h-4"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                                    lineNumber: 365,
+                                                                    lineNumber: 349,
                                                                     columnNumber: 21
                                                                 }, this),
                                                                 anuncio.city
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                            lineNumber: 364,
+                                                            lineNumber: 348,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1634,7 +1633,7 @@ function AnuncioDetailClient({ anuncio, anuncioId }) {
                                                             children: "•"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                            lineNumber: 368,
+                                                            lineNumber: 352,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1644,14 +1643,14 @@ function AnuncioDetailClient({ anuncio, anuncioId }) {
                                                                     className: "w-4 h-4"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                                    lineNumber: 370,
+                                                                    lineNumber: 354,
                                                                     columnNumber: 21
                                                                 }, this),
                                                                 anuncio.date
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                            lineNumber: 369,
+                                                            lineNumber: 353,
                                                             columnNumber: 19
                                                         }, this),
                                                         anuncio.vistas && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
@@ -1661,7 +1660,7 @@ function AnuncioDetailClient({ anuncio, anuncioId }) {
                                                                     children: "•"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                                    lineNumber: 375,
+                                                                    lineNumber: 359,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1671,14 +1670,14 @@ function AnuncioDetailClient({ anuncio, anuncioId }) {
                                                                             className: "w-4 h-4"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                                            lineNumber: 377,
+                                                                            lineNumber: 361,
                                                                             columnNumber: 25
                                                                         }, this),
                                                                         anuncio.vistas
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                                    lineNumber: 376,
+                                                                    lineNumber: 360,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             ]
@@ -1686,13 +1685,13 @@ function AnuncioDetailClient({ anuncio, anuncioId }) {
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                    lineNumber: 363,
+                                                    lineNumber: 347,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                            lineNumber: 361,
+                                            lineNumber: 345,
                                             columnNumber: 15
                                         }, this),
                                         anuncio.precio && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1703,7 +1702,7 @@ function AnuncioDetailClient({ anuncio, anuncioId }) {
                                                     children: "Precio"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                    lineNumber: 388,
+                                                    lineNumber: 372,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1714,13 +1713,13 @@ function AnuncioDetailClient({ anuncio, anuncioId }) {
                                                     }).format(anuncio.precio)
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                    lineNumber: 389,
+                                                    lineNumber: 373,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                            lineNumber: 387,
+                                            lineNumber: 371,
                                             columnNumber: 17
                                         }, this),
                                         anuncio.disponibilidad && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1734,12 +1733,12 @@ function AnuncioDetailClient({ anuncio, anuncioId }) {
                                                             className: "w-5 h-5 text-primary"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                            lineNumber: 403,
+                                                            lineNumber: 387,
                                                             columnNumber: 23
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                        lineNumber: 402,
+                                                        lineNumber: 386,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1749,7 +1748,7 @@ function AnuncioDetailClient({ anuncio, anuncioId }) {
                                                                 children: "Disponibilidad"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                                lineNumber: 406,
+                                                                lineNumber: 390,
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1757,24 +1756,24 @@ function AnuncioDetailClient({ anuncio, anuncioId }) {
                                                                 children: anuncio.disponibilidad
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                                lineNumber: 407,
+                                                                lineNumber: 391,
                                                                 columnNumber: 23
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                        lineNumber: 405,
+                                                        lineNumber: 389,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                lineNumber: 401,
+                                                lineNumber: 385,
                                                 columnNumber: 19
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                            lineNumber: 400,
+                                            lineNumber: 384,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1785,7 +1784,7 @@ function AnuncioDetailClient({ anuncio, anuncioId }) {
                                                     children: "Contacto"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                    lineNumber: 415,
+                                                    lineNumber: 399,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1800,12 +1799,12 @@ function AnuncioDetailClient({ anuncio, anuncioId }) {
                                                                         className: "w-5 h-5 text-green-500"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                                        lineNumber: 421,
+                                                                        lineNumber: 405,
                                                                         columnNumber: 23
                                                                     }, this)
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                                    lineNumber: 420,
+                                                                    lineNumber: 404,
                                                                     columnNumber: 21
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1815,7 +1814,7 @@ function AnuncioDetailClient({ anuncio, anuncioId }) {
                                                                             children: "WhatsApp"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                                            lineNumber: 424,
+                                                                            lineNumber: 408,
                                                                             columnNumber: 23
                                                                         }, this),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1823,19 +1822,19 @@ function AnuncioDetailClient({ anuncio, anuncioId }) {
                                                                             children: anuncio.whatsapp
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                                            lineNumber: 425,
+                                                                            lineNumber: 409,
                                                                             columnNumber: 23
                                                                         }, this)
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                                    lineNumber: 423,
+                                                                    lineNumber: 407,
                                                                     columnNumber: 21
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                            lineNumber: 419,
+                                                            lineNumber: 403,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1846,24 +1845,24 @@ function AnuncioDetailClient({ anuncio, anuncioId }) {
                                                                 className: "w-5 h-5 text-green-500"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                                lineNumber: 434,
+                                                                lineNumber: 418,
                                                                 columnNumber: 23
                                                             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$copy$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Copy$3e$__["Copy"], {
                                                                 className: "w-5 h-5 text-muted-foreground"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                                lineNumber: 436,
+                                                                lineNumber: 420,
                                                                 columnNumber: 23
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                            lineNumber: 428,
+                                                            lineNumber: 412,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                    lineNumber: 418,
+                                                    lineNumber: 402,
                                                     columnNumber: 17
                                                 }, this),
                                                 anuncio.email && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1878,12 +1877,12 @@ function AnuncioDetailClient({ anuncio, anuncioId }) {
                                                                         className: "w-5 h-5 text-primary"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                                        lineNumber: 446,
+                                                                        lineNumber: 430,
                                                                         columnNumber: 25
                                                                     }, this)
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                                    lineNumber: 445,
+                                                                    lineNumber: 429,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1894,7 +1893,7 @@ function AnuncioDetailClient({ anuncio, anuncioId }) {
                                                                             children: "Email"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                                            lineNumber: 449,
+                                                                            lineNumber: 433,
                                                                             columnNumber: 25
                                                                         }, this),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1902,19 +1901,19 @@ function AnuncioDetailClient({ anuncio, anuncioId }) {
                                                                             children: anuncio.email
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                                            lineNumber: 450,
+                                                                            lineNumber: 434,
                                                                             columnNumber: 25
                                                                         }, this)
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                                    lineNumber: 448,
+                                                                    lineNumber: 432,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                            lineNumber: 444,
+                                                            lineNumber: 428,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1925,30 +1924,30 @@ function AnuncioDetailClient({ anuncio, anuncioId }) {
                                                                 className: "w-5 h-5 text-green-500"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                                lineNumber: 459,
+                                                                lineNumber: 443,
                                                                 columnNumber: 25
                                                             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$copy$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Copy$3e$__["Copy"], {
                                                                 className: "w-5 h-5 text-muted-foreground"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                                lineNumber: 461,
+                                                                lineNumber: 445,
                                                                 columnNumber: 25
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                            lineNumber: 453,
+                                                            lineNumber: 437,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                    lineNumber: 443,
+                                                    lineNumber: 427,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                            lineNumber: 414,
+                                            lineNumber: 398,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1964,14 +1963,14 @@ function AnuncioDetailClient({ anuncio, anuncioId }) {
                                                             className: "w-5 h-5"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                            lineNumber: 476,
+                                                            lineNumber: 460,
                                                             columnNumber: 19
                                                         }, this),
                                                         "Contactar por WhatsApp"
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                    lineNumber: 470,
+                                                    lineNumber: 454,
                                                     columnNumber: 17
                                                 }, this),
                                                 anuncio.email && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -1982,20 +1981,20 @@ function AnuncioDetailClient({ anuncio, anuncioId }) {
                                                             className: "w-5 h-5"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                            lineNumber: 485,
+                                                            lineNumber: 469,
                                                             columnNumber: 21
                                                         }, this),
                                                         "Enviar Email"
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                    lineNumber: 481,
+                                                    lineNumber: 465,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                            lineNumber: 469,
+                                            lineNumber: 453,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2008,7 +2007,7 @@ function AnuncioDetailClient({ anuncio, anuncioId }) {
                                                             className: "w-4 h-4 text-muted-foreground"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                            lineNumber: 494,
+                                                            lineNumber: 478,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2016,13 +2015,13 @@ function AnuncioDetailClient({ anuncio, anuncioId }) {
                                                             children: "Compartir"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                            lineNumber: 495,
+                                                            lineNumber: 479,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                    lineNumber: 493,
+                                                    lineNumber: 477,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2036,7 +2035,7 @@ function AnuncioDetailClient({ anuncio, anuncioId }) {
                                                             children: "Twitter"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                            lineNumber: 498,
+                                                            lineNumber: 482,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -2047,53 +2046,53 @@ function AnuncioDetailClient({ anuncio, anuncioId }) {
                                                             children: "WhatsApp"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                            lineNumber: 506,
+                                                            lineNumber: 490,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                                    lineNumber: 497,
+                                                    lineNumber: 481,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                            lineNumber: 492,
+                                            lineNumber: 476,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                    lineNumber: 359,
+                                    lineNumber: 343,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                                lineNumber: 358,
+                                lineNumber: 342,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                        lineNumber: 189,
+                        lineNumber: 173,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                lineNumber: 179,
+                lineNumber: 163,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$footer$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-                lineNumber: 521,
+                lineNumber: 505,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/anuncios/[id]/anuncio-detail-client.tsx",
-        lineNumber: 95,
+        lineNumber: 79,
         columnNumber: 5
     }, this);
 }

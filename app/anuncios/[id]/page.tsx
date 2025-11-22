@@ -1,12 +1,12 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { anunciosData } from "@/lib/anuncios-data"
+import { getAnuncioById } from "@/lib/anuncios-data"
 import AnuncioDetailClient from "./anuncio-detail-client"
 import { ChevronLeft } from "lucide-react"
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
   const { id } = await params
-  const anuncio = anunciosData[Number.parseInt(id)]
+  const anuncio = getAnuncioById(id)
 
   if (!anuncio) {
     return {
@@ -62,7 +62,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
 }
 
 // Generate JSON-LD structured data
-function generateJsonLd(anuncio: typeof anunciosData[0], id: string) {
+function generateJsonLd(anuncio: NonNullable<ReturnType<typeof getAnuncioById>>) {
   return {
     "@context": "https://schema.org",
     "@type": "Product",
@@ -91,7 +91,7 @@ function generateJsonLd(anuncio: typeof anunciosData[0], id: string) {
 
 export default async function AnuncioDetailPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params
-  const anuncio = anunciosData[Number.parseInt(id)]
+  const anuncio = getAnuncioById(id)
 
   if (!anuncio) {
     return (
@@ -116,7 +116,7 @@ export default async function AnuncioDetailPage({ params }: { params: Promise<{ 
     )
   }
 
-  const jsonLd = generateJsonLd(anuncio, id)
+  const jsonLd = generateJsonLd(anuncio)
 
   return (
     <>
@@ -124,7 +124,7 @@ export default async function AnuncioDetailPage({ params }: { params: Promise<{ 
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <AnuncioDetailClient anuncio={anuncio} anuncioId={id} />
+      <AnuncioDetailClient anuncio={anuncio} />
     </>
   )
 }

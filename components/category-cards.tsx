@@ -1,6 +1,7 @@
 "use client"
 
-import { Heart, Users, Sparkles, User, CheckCircle2, Phone, Eye, MapPin, ChevronRight } from "lucide-react"
+import Image from "next/image"
+import { Heart, Users, Sparkles, User, MapPin, ChevronRight } from "lucide-react"
 import Link from "next/link"
 
 const categories = [
@@ -26,7 +27,7 @@ const categories = [
     slug: "trans",
     description:
       "Anuncios de trans y travestis en Bolivia. Compañía auténtica con perfiles verificados y contacto seguro.",
-    image: "https://bo.skokka.com/static/assets/transsexual_repr.09bc5c7b4ed7201892f6.jpg",
+    image: "/images/category-trans.jpg",
     icon: Sparkles,
     gradient: "from-purple-500/20 via-secondary/20 to-violet-500/20",
     stats: "150+ anuncios",
@@ -41,7 +42,7 @@ const categories = [
     name: "Hombres",
     slug: "hombres",
     description: "Servicios masculinos para encuentros discretos. Gigolos y acompañantes profesionales en tu zona.",
-    image: "https://bo.skokka.com/static/assets/menseekmen_repr.09bc5c7b4ed7201892f6.jpg",
+    image: "/images/category-hombres.jpg",
     icon: User,
     gradient: "from-blue-500/20 via-primary/20 to-cyan-500/20",
     stats: "80+ anuncios",
@@ -56,7 +57,7 @@ const categories = [
     name: "Parejas",
     slug: "parejas",
     description: "Parejas liberales y swingers. Encuentros únicos y experiencias compartidas en un ambiente seguro.",
-    image: "https://bo.skokka.com/static/assets/couples_repr.09bc5c7b4ed7201892f6.jpg",
+    image: "/images/category-parejas.jpg",
     icon: Users,
     gradient: "from-amber-500/20 via-orange-500/20 to-primary/20",
     stats: "60+ anuncios",
@@ -110,10 +111,13 @@ export default function CategoryCards() {
 
                   {/* Image section - prominent */}
                   <div className="relative h-48 sm:h-56 overflow-hidden">
-                    <img
-                      src={category.image || "/placeholder.svg"}
-                      alt={category.name}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    <Image
+                      src={category.image}
+                      alt={`Categoría ${category.name} - Anuncios clasificados`}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      loading="lazy"
                     />
                     {/* Gradient overlay on image */}
                     <div className="absolute inset-0 bg-gradient-to-t from-card via-card/60 to-transparent" />

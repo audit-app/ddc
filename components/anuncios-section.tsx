@@ -18,8 +18,8 @@ export default function AnunciosSection() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {anunciosData.map((anuncio, index) => (
-              <AnuncioCard key={index} anuncio={anuncio} onOpen={setSelectedAnuncio} />
+            {anunciosData.slice(0, 6).map((anuncio) => (
+              <AnuncioCard key={anuncio.id} anuncio={anuncio} onOpen={setSelectedAnuncio} />
             ))}
           </div>
         </div>

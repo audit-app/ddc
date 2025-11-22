@@ -1,12 +1,244 @@
-[00:00:01.215] Server  LOG      ✓ Ready in 841ms
-[00:00:04.593] Server  LOG      ○ Compiling / ...
-[00:00:07.196] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:07.520] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:00:07.520] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:00:07.520] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763761756612}
-[00:00:11.648] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/anuncios color: rgb(120, 120, 120) color: inherit {"dp":"/anuncios","o":"http://localhost:3000/anuncios","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763761760935}
-[00:00:14.168] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/anuncios/0 color: rgb(120, 120, 120) color: inherit {"dp":"/anuncios/[id]","o":"http://localhost:3000/anuncios/0","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763761763551}
-[00:00:14.472] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
-[00:00:51.873] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/anuncios color: rgb(120, 120, 120) color: inherit {"dp":"/anuncios","o":"http://localhost:3000/anuncios","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763761803155}
-[00:00:55.750] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/anuncios/0 color: rgb(120, 120, 120) color: inherit {"dp":"/anuncios/[id]","o":"http://localhost:3000/anuncios/0","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763761807211}
-[00:00:57.878] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/anuncios color: rgb(120, 120, 120) color: inherit {"dp":"/anuncios","o":"http://localhost:3000/anuncios","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763761809436}
+[00:00:02.679] Server  LOG      ✓ Ready in 1490ms
+[00:00:05.779] Server  LOG      ○ Compiling / ...
+[00:00:14.422] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:00:14.422] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:00:14.422] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763770344931}
+[00:00:23.518] Server  LOG      ✓ Compiled in 75ms
+[00:00:32.648] Server  ERROR    ⨯ "upstream image response failed for" "https://bo.skokka.com/static/assets/menseekmen_repr.09bc5c7b4ed7201892f6.jpg" 404
+[00:00:32.663] Server  ERROR    ⨯ "upstream image response failed for" "https://bo.skokka.com/static/assets/transsexual_repr.09bc5c7b4ed7201892f6.jpg" 404
+[00:00:32.679] Server  ERROR    ⨯ "upstream image response failed for" "https://bo.skokka.com/static/assets/couples_repr.09bc5c7b4ed7201892f6.jpg" 404
+[00:00:47.432] Server  LOG      ✓ Compiled in 83ms
+[00:00:47.724] Browser ERROR   ./components/hero.tsx:82:7
+Parsing ecmascript source code failed
+  80 |         </div>
+  81 |       </div>
+> 82 |     </div>
+     |       ^^^
+  83 |   )
+  84 | }
+  85 |
+
+Expected corresponding JSX closing tag for <section>
+
+Import trace:
+  Server Component:
+    ./components/hero.tsx
+    ./app/page.tsx
+[00:01:07.416] Server  LOG      ✓ Compiled in 47ms
+[00:01:16.573] Server  LOG      ✓ Compiled in 89ms
+[00:01:29.882] Server  LOG      ✓ Compiled in 73ms
+[00:01:48.482] Server  LOG      ✓ Compiled in 109ms
+[00:02:05.142] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:02:05.142] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:02:05.142] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763770456230}
+[00:02:05.249] Server  ERROR    ⨯ "upstream image response failed for" "https://bo.skokka.com/static/assets/transsexual_repr.09bc5c7b4ed7201892f6.jpg" 404
+[00:02:05.582] Server  ERROR    ⨯ "upstream image response failed for" "https://bo.skokka.com/static/assets/menseekmen_repr.09bc5c7b4ed7201892f6.jpg" 404
+[00:02:05.630] Server  ERROR    ⨯ "upstream image response failed for" "https://bo.skokka.com/static/assets/couples_repr.09bc5c7b4ed7201892f6.jpg" 404
+[00:02:15.781] Server  ERROR    ⨯ "upstream image response failed for" "https://bo.skokka.com/static/assets/transsexual_repr.09bc5c7b4ed7201892f6.jpg" 404
+[00:02:16.162] Server  ERROR    ⨯ "upstream image response failed for" "https://bo.skokka.com/static/assets/menseekmen_repr.09bc5c7b4ed7201892f6.jpg" 404
+[00:02:16.694] Server  ERROR    ⨯ "upstream image response failed for" "https://bo.skokka.com/static/assets/couples_repr.09bc5c7b4ed7201892f6.jpg" 404
+[00:02:22.238] Server  ERROR    ⨯ "upstream image response failed for" "https://bo.skokka.com/static/assets/couples_repr.09bc5c7b4ed7201892f6.jpg" 404
+[00:02:22.248] Server  ERROR    ⨯ "upstream image response failed for" "https://bo.skokka.com/static/assets/menseekmen_repr.09bc5c7b4ed7201892f6.jpg" 404
+[00:02:22.270] Server  ERROR    ⨯ "upstream image response failed for" "https://bo.skokka.com/static/assets/transsexual_repr.09bc5c7b4ed7201892f6.jpg" 404
+[00:02:22.816] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:02:22.816] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:02:22.816] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763770474029}
+[00:02:24.960] Server  ERROR    ⨯ "upstream image response failed for" "https://bo.skokka.com/static/assets/menseekmen_repr.09bc5c7b4ed7201892f6.jpg" 404
+[00:02:24.978] Server  ERROR    ⨯ "upstream image response failed for" "https://bo.skokka.com/static/assets/transsexual_repr.09bc5c7b4ed7201892f6.jpg" 404
+[00:02:24.985] Server  ERROR    ⨯ "upstream image response failed for" "https://bo.skokka.com/static/assets/couples_repr.09bc5c7b4ed7201892f6.jpg" 404
+[00:02:25.782] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:02:25.782] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:02:25.782] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763770476945}
+[00:05:33.405] Server  ERROR    ⨯ "upstream image response failed for" "https://bo.skokka.com/static/assets/transsexual_repr.09bc5c7b4ed7201892f6.jpg" 404
+[00:05:33.636] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:05:33.636] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:05:33.636] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763770665856}
+[00:05:33.642] Server  ERROR    ⨯ "upstream image response failed for" "https://bo.skokka.com/static/assets/menseekmen_repr.09bc5c7b4ed7201892f6.jpg" 404
+[00:05:33.697] Server  ERROR    ⨯ "upstream image response failed for" "https://bo.skokka.com/static/assets/couples_repr.09bc5c7b4ed7201892f6.jpg" 404
+[00:06:47.214] Server  LOG      ✓ Compiled in 284ms
+[00:06:48.332] Server  ERROR    ⨯ "upstream image response failed for" "https://bo.skokka.com/static/assets/womenseekmen_repr.09bc5c7b4ed720892f6.jpg" 404
+[00:06:51.105] Server  LOG      ✓ Compiled in 450ms
+[00:07:52.534] Server  LOG      ✓ Compiled in 98ms
+[00:08:04.519] Server  LOG      ✓ Compiled in 90ms
+[00:08:11.528] Server  LOG      ✓ Compiled in 83ms
+[00:08:25.210] Server  LOG      ✓ Compiled in 71ms
+[00:08:35.559] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:08:35.559] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:08:35.559] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763770848884}
+[00:08:45.498] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:08:45.498] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:08:45.498] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763770858908}
+[00:08:48.857] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:08:48.857] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:08:48.857] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763770862293}
+[00:09:27.646] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/anuncios color: rgb(120, 120, 120) color: inherit {"dp":"/anuncios","o":"http://localhost:3000/anuncios","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763770901239}
+[00:09:33.462] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/anuncios/argentina-de-lujo color: rgb(120, 120, 120) color: inherit {"dp":"/anuncios/[id]","o":"http://localhost:3000/anuncios/argentina-de-lujo","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763770907095}
+[00:09:33.777] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[00:09:34.675] Server  ERROR    ⨯ "upstream image response failed for" "https://bo.skokka.com/image/post/78/17/781777ab11994ee393ded07ca4de86c9.jpg" 404
+[00:09:46.615] Server  ERROR    ⨯ "upstream image response failed for" "https://bo.skokka.com/image/post/78/17/781777ab11994ee393ded07ca4de86c9.jpg" 404
+[00:09:47.059] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <RedirectBoundary>
+      <RedirectErrorBoundary router={{...}}>
+        <InnerLayoutRouter url="/anuncios/..." tree={[...]} params={{id:"argent..."}} cacheNode={{lazyData:null, ...}} ...>
+          <SegmentViewNode type="page" pagePath="anuncios/[...">
+            <SegmentTrieNode>
+            <AnuncioDetailPage>
+              <script>
+              <AnuncioDetailPage>
+                <AnuncioDetailClient anuncio={{id:"argent...", ...}}>
+                  <main className="min-h-scre...">
+                    <Header>
+                    <div className="max-w-6xl ...">
+                      <LinkComponent>
+                      <div className="grid grid-...">
+                        <div className="lg:col-spa...">
+                          <div>
+                          <div>
+                          <div>
+                          <div className="bg-card/80...">
+                            <h2>
+                            <div className="grid grid-...">
+                              <div>
+                              <div>
+                              <div className="p-4 bg-bac...">
+                                <p>
+                                <p className="font-bold text-foreground">
++                                 1523
+-                                 1,523
+                              ...
+                            ...
+                          ...
+                        ...
+                    ...
+          ...
+        ...
+
+[00:09:47.253] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:09:47.254] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/anuncios/argentina-de-lujo","route":"/anuncios/[id]"}
+[00:09:47.254] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/anuncios/argentina-de-lujo color: rgb(120, 120, 120) color: inherit {"dp":"/anuncios/[id]","o":"http://localhost:3000/anuncios/argentina-de-lujo","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763770920991}
+[00:09:47.337] Server  ERROR    ⨯ "upstream image response failed for" "https://bo.skokka.com/image/post/78/17/781777ab11994ee393ded07ca4de86c9.jpg" 404
+[00:09:48.688] Server  ERROR    ⨯ "upstream image response failed for" "https://bo.skokka.com/image/post/78/17/781777ab11994ee393ded07ca4de86c9.jpg" 404
+[00:09:53.230] Server  ERROR    ⨯ "upstream image response failed for" "https://bo.skokka.com/image/post/78/17/781777ab11994ee393ded07ca4de86c9.jpg" 404
+[00:09:53.789] Server  ERROR    ⨯ "upstream image response failed for" "https://bo.skokka.com/image/post/78/17/781777ab11994ee393ded07ca4de86c9.jpg" 404
+[00:09:55.775] Server  ERROR    ⨯ "upstream image response failed for" "https://bo.skokka.com/image/post/78/17/781777ab11994ee393ded07ca4de86c9.jpg" 404
+[00:09:57.064] Server  ERROR    ⨯ "upstream image response failed for" "https://bo.skokka.com/image/post/78/17/781777ab11994ee393ded07ca4de86c9.jpg" 404
+[00:09:57.671] Server  ERROR    ⨯ "upstream image response failed for" "https://bo.skokka.com/image/post/78/17/781777ab11994ee393ded07ca4de86c9.jpg" 404
+[00:09:57.743] Server  ERROR    ⨯ "upstream image response failed for" "https://bo.skokka.com/image/post/78/17/781777ab11994ee393ded07ca4de86c9.jpg" 404
+[00:09:58.172] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <RedirectBoundary>
+      <RedirectErrorBoundary router={{...}}>
+        <InnerLayoutRouter url="/anuncios/..." tree={[...]} params={{id:"argent..."}} cacheNode={{lazyData:null, ...}} ...>
+          <SegmentViewNode type="page" pagePath="anuncios/[...">
+            <SegmentTrieNode>
+            <AnuncioDetailPage>
+              <script>
+              <AnuncioDetailPage>
+                <AnuncioDetailClient anuncio={{id:"argent...", ...}}>
+                  <main className="min-h-scre...">
+                    <Header>
+                    <div className="max-w-6xl ...">
+                      <LinkComponent>
+                      <div className="grid grid-...">
+                        <div className="lg:col-spa...">
+                          <div>
+                          <div>
+                          <div>
+                          <div className="bg-card/80...">
+                            <h2>
+                            <div className="grid grid-...">
+                              <div>
+                              <div>
+                              <div className="p-4 bg-bac...">
+                                <p>
+                                <p className="font-bold text-foreground">
++                                 1523
+-                                 1,523
+                              ...
+                            ...
+                          ...
+                        ...
+                    ...
+          ...
+        ...
+
+[00:09:58.232] Server  ERROR    ⨯ "upstream image response failed for" "https://bo.skokka.com/image/post/78/17/781777ab11994ee393ded07ca4de86c9.jpg" 404
+[00:09:58.325] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:09:58.325] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/anuncios/argentina-de-lujo","route":"/anuncios/[id]"}
+[00:09:58.325] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/anuncios/argentina-de-lujo color: rgb(120, 120, 120) color: inherit {"dp":"/anuncios/[id]","o":"http://localhost:3000/anuncios/argentina-de-lujo","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763770932076}
+[00:10:01.144] Server  ERROR    ⨯ "upstream image response failed for" "https://bo.skokka.com/image/post/78/17/781777ab11994ee393ded07ca4de86c9.jpg" 404
+[00:10:01.534] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <RedirectBoundary>
+      <RedirectErrorBoundary router={{...}}>
+        <InnerLayoutRouter url="/anuncios/..." tree={[...]} params={{id:"argent..."}} cacheNode={{lazyData:null, ...}} ...>
+          <SegmentViewNode type="page" pagePath="anuncios/[...">
+            <SegmentTrieNode>
+            <AnuncioDetailPage>
+              <script>
+              <AnuncioDetailPage>
+                <AnuncioDetailClient anuncio={{id:"argent...", ...}}>
+                  <main className="min-h-scre...">
+                    <Header>
+                    <div className="max-w-6xl ...">
+                      <LinkComponent>
+                      <div className="grid grid-...">
+                        <div className="lg:col-spa...">
+                          <div>
+                          <div>
+                          <div>
+                          <div className="bg-card/80...">
+                            <h2>
+                            <div className="grid grid-...">
+                              <div>
+                              <div>
+                              <div className="p-4 bg-bac...">
+                                <p>
+                                <p className="font-bold text-foreground">
++                                 1523
+-                                 1,523
+                              ...
+                            ...
+                          ...
+                        ...
+                    ...
+          ...
+        ...
+
+[00:10:01.675] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:10:01.675] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/anuncios/argentina-de-lujo","route":"/anuncios/[id]"}
+[00:10:01.675] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/anuncios/argentina-de-lujo color: rgb(120, 120, 120) color: inherit {"dp":"/anuncios/[id]","o":"http://localhost:3000/anuncios/argentina-de-lujo","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763770935446}

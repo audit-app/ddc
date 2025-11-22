@@ -1,0 +1,7 @@
+User-Agent: *
+Allow: /
+Allow: /anuncios
+Disallow: /admin
+Disallow: /api
+
+Sitemap: https://skokka.com/sitemap.xml

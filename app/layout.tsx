@@ -1,12 +1,15 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Geist, Geist_Mono } from "next/font/google"
+import { Geist } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { ThemeProvider } from "@/components/theme-provider"
 import "./globals.css"
 
-const _geist = Geist({ subsets: ["latin"] })
-const _geistMono = Geist_Mono({ subsets: ["latin"] })
+const geist = Geist({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-geist",
+})
 
 export const metadata: Metadata = {
   title: "Tablón de Anuncios para Adultos | Contacto Directo y Seguro",
@@ -81,7 +84,7 @@ export default function RootLayout({
         <meta name="theme-color" content="#1A2332" media="(prefers-color-scheme: dark)" />
         <meta name="theme-color" content="#F8F7F4" media="(prefers-color-scheme: light)" />
       </head>
-      <body className={`font-sans antialiased`}>
+      <body className={`${geist.variable} font-sans antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           {children}
           <Analytics />

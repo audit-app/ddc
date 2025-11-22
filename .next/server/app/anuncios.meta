@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/anuncios/layout,_N_T_/anuncios/page,_N_T_/anuncios"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/anuncios/__PAGE__",
+    "/anuncios",
+    "/_index",
+    "/_head"
+  ]
+}

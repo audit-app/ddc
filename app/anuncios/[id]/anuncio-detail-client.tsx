@@ -25,25 +25,9 @@ import {
   Phone,
 } from "lucide-react"
 
-interface Anuncio {
-  title: string
-  anuncio: string
-  fotos: string[]
-  whatsapp: string
-  email?: string
-  city: string
-  date: string
-  verificado?: boolean
-  vistas?: number
-  edad?: number
-  ubicacion?: string
-  servicios?: string[]
-  disponibilidad?: string
-  precio?: number | null
-  link: string
-}
+import type { Anuncio } from "@/lib/anuncios-data"
 
-export default function AnuncioDetailClient({ anuncio, anuncioId }: { anuncio: Anuncio; anuncioId: string }) {
+export default function AnuncioDetailClient({ anuncio }: { anuncio: Anuncio }) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const [copied, setCopied] = useState<string | null>(null)
   const [isLightboxOpen, setIsLightboxOpen] = useState(false)

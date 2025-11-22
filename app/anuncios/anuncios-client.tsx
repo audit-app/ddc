@@ -7,12 +7,15 @@ import Header from "@/components/header"
 import Footer from "@/components/footer"
 import SearchModal from "@/components/search-modal"
 import { anunciosData } from "@/lib/anuncios-data"
-import { Search, MapPin, Filter, ChevronDown, Sparkles, CheckCircle2, Camera, MessageCircle, Eye } from "lucide-react"
+import { Search, MapPin, Filter, ChevronDown, Sparkles, CheckCircle2, Camera, MessageCircle, Eye, ChevronLeft, ChevronRight } from "lucide-react"
+
+const ITEMS_PER_PAGE = 10
 
 export default function AnunciosClientPage() {
   const [isSearchModalOpen, setIsSearchModalOpen] = useState(false)
   const [selectedCity, setSelectedCity] = useState("")
   const [showFilters, setShowFilters] = useState(false)
+  const [currentPage, setCurrentPage] = useState(1)
 
   const cities = Array.from(new Set(anunciosData.map((a) => a.city)))
 
@@ -22,6 +25,44 @@ export default function AnunciosClientPage() {
       return matchesCity
     })
   }, [selectedCity])
+
+  // Calculate pagination
+  const totalPages = Math.ceil(filteredAnuncios.length / ITEMS_PER_PAGE)
+  const startIndex = (currentPage - 1) * ITEMS_PER_PAGE
+  const paginatedAnuncios = filteredAnuncios.slice(startIndex, startIndex + ITEMS_PER_PAGE)
+
+  // Reset to page 1 when filter changes
+  const handleCityChange = (city: string) => {
+    setSelectedCity(city)
+    setCurrentPage(1)
+  }
+
+  // Generate page numbers to show
+  const getPageNumbers = () => {
+    const pages: (number | string)[] = []
+    const maxVisible = 5
+
+    if (totalPages <= maxVisible) {
+      for (let i = 1; i <= totalPages; i++) pages.push(i)
+    } else {
+      if (currentPage <= 3) {
+        for (let i = 1; i <= 4; i++) pages.push(i)
+        pages.push("...")
+        pages.push(totalPages)
+      } else if (currentPage >= totalPages - 2) {
+        pages.push(1)
+        pages.push("...")
+        for (let i = totalPages - 3; i <= totalPages; i++) pages.push(i)
+      } else {
+        pages.push(1)
+        pages.push("...")
+        for (let i = currentPage - 1; i <= currentPage + 1; i++) pages.push(i)
+        pages.push("...")
+        pages.push(totalPages)
+      }
+    }
+    return pages
+  }
 
   return (
     <main className="min-h-screen bg-background">
@@ -83,7 +124,7 @@ export default function AnunciosClientPage() {
                 <MapPin className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-primary pointer-events-none" />
                 <select
                   value={selectedCity}
-                  onChange={(e) => setSelectedCity(e.target.value)}
+                  onChange={(e) => handleCityChange(e.target.value)}
                   className="w-full pl-12 pr-10 py-3.5 bg-background/50 border border-white/10 rounded-xl text-foreground appearance-none cursor-pointer hover:border-primary/30 focus:border-primary/50 focus:outline-none transition-colors font-medium"
                 >
                   <option value="">Todas las ciudades</option>
@@ -102,12 +143,22 @@ export default function AnunciosClientPage() {
 
       {/* Anuncios List */}
       <section className="max-w-5xl mx-auto px-4 sm:px-6 pb-16">
-        {filteredAnuncios.length > 0 ? (
+        {/* Results info */}
+        {filteredAnuncios.length > 0 && (
+          <div className="flex items-center justify-between mb-6 text-sm text-muted-foreground">
+            <span>
+              Mostrando {startIndex + 1}-{Math.min(startIndex + ITEMS_PER_PAGE, filteredAnuncios.length)} de {filteredAnuncios.length}
+            </span>
+            <span>Página {currentPage} de {totalPages}</span>
+          </div>
+        )}
+
+        {paginatedAnuncios.length > 0 ? (
           <div className="space-y-4">
-            {filteredAnuncios.map((anuncio, index) => (
+            {paginatedAnuncios.map((anuncio) => (
               <Link
-                key={index}
-                href={`/anuncios/${index}`}
+                key={anuncio.id}
+                href={`/anuncios/${anuncio.id}`}
                 className="group block"
               >
                 <article className="flex gap-4 sm:gap-6 p-4 sm:p-5 bg-card/80 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300">
@@ -204,10 +255,58 @@ export default function AnunciosClientPage() {
             <h3 className="text-2xl font-bold text-foreground mb-3">No se encontraron anuncios</h3>
             <p className="text-muted-foreground mb-6">Intenta ajustar tus filtros de búsqueda</p>
             <button
-              onClick={() => setSelectedCity("")}
+              onClick={() => handleCityChange("")}
               className="px-6 py-3 bg-primary text-primary-foreground font-semibold rounded-xl hover:shadow-lg hover:shadow-primary/30 transition-all"
             >
               Ver todos los anuncios
+            </button>
+          </div>
+        )}
+
+        {/* Pagination */}
+        {totalPages > 1 && (
+          <div className="flex items-center justify-center gap-2 mt-10">
+            {/* Previous button */}
+            <button
+              onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
+              disabled={currentPage === 1}
+              className="flex items-center gap-1 px-4 py-2.5 bg-card/80 backdrop-blur-sm border border-white/10 rounded-xl font-medium transition-all disabled:opacity-40 disabled:cursor-not-allowed hover:border-primary/30 hover:text-primary"
+            >
+              <ChevronLeft className="w-4 h-4" />
+              <span className="hidden sm:inline">Anterior</span>
+            </button>
+
+            {/* Page numbers */}
+            <div className="flex items-center gap-1">
+              {getPageNumbers().map((page, idx) =>
+                page === "..." ? (
+                  <span key={`dots-${idx}`} className="px-3 py-2 text-muted-foreground">
+                    ...
+                  </span>
+                ) : (
+                  <button
+                    key={page}
+                    onClick={() => setCurrentPage(page as number)}
+                    className={`min-w-[44px] px-3 py-2.5 rounded-xl font-semibold transition-all ${
+                      currentPage === page
+                        ? "bg-primary text-primary-foreground shadow-lg shadow-primary/30"
+                        : "bg-card/80 backdrop-blur-sm border border-white/10 hover:border-primary/30 hover:text-primary"
+                    }`}
+                  >
+                    {page}
+                  </button>
+                )
+              )}
+            </div>
+
+            {/* Next button */}
+            <button
+              onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
+              disabled={currentPage === totalPages}
+              className="flex items-center gap-1 px-4 py-2.5 bg-card/80 backdrop-blur-sm border border-white/10 rounded-xl font-medium transition-all disabled:opacity-40 disabled:cursor-not-allowed hover:border-primary/30 hover:text-primary"
+            >
+              <span className="hidden sm:inline">Siguiente</span>
+              <ChevronRight className="w-4 h-4" />
             </button>
           </div>
         )}
