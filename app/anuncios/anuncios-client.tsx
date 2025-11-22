@@ -70,8 +70,7 @@ export default function AnunciosClientPage() {
       <SearchModal isOpen={isSearchModalOpen} onClose={() => setIsSearchModalOpen(false)} />
 
       {/* Hero section */}
-      <section className="relative py-12 sm:py-16 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-background to-background" />
+      <section className="relative py-12 sm:py-16 overflow-hidden bg-primary/5">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl opacity-30" />
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-3xl opacity-30" />
 
@@ -84,9 +83,7 @@ export default function AnunciosClientPage() {
               </div>
               <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-3">
                 Anuncios en{" "}
-                <span className="bg-gradient-to-r from-primary via-primary to-secondary bg-clip-text text-transparent">
-                  Bolivia
-                </span>
+                <span className="text-primary">Bolivia</span>
               </h1>
               <p className="text-lg text-muted-foreground">
                 {filteredAnuncios.length} anuncio{filteredAnuncios.length !== 1 ? "s" : ""} disponible{filteredAnuncios.length !== 1 ? "s" : ""}
@@ -174,7 +171,7 @@ export default function AnunciosClientPage() {
                         loading="lazy"
                       />
                     ) : (
-                      <div className="flex h-full items-center justify-center bg-gradient-to-br from-primary/10 to-secondary/10">
+                      <div className="flex h-full items-center justify-center bg-primary/5">
                         <Camera className="w-8 h-8 text-muted-foreground/50" />
                       </div>
                     )}

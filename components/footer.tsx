@@ -12,11 +12,11 @@ export default function Footer() {
           {/* Left Section - Logo and Description */}
           <div className="lg:col-span-5">
             <Link href="/" className="inline-flex items-center gap-2 mb-4 group">
-              <div className="w-9 h-9 bg-gradient-to-br from-primary via-primary to-secondary rounded-xl flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow">
+              <div className="w-9 h-9 bg-primary rounded-xl flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow">
                 <Heart className="w-5 h-5 text-primary-foreground" fill="currentColor" />
               </div>
               <div className="flex flex-col">
-                <span className="text-xl font-bold bg-gradient-to-r from-primary via-primary to-secondary bg-clip-text text-transparent">
+                <span className="text-xl font-bold text-primary">
                   Damas de Compañía
                 </span>
                 <span className="text-[10px] text-muted-foreground -mt-1">Bolivia</span>
@@ -111,10 +111,10 @@ export default function Footer() {
 
         {/* CTA Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pb-8 border-b border-border/40">
-          <div className="p-6 bg-gradient-to-br from-primary/5 to-secondary/5 rounded-2xl border border-border/50">
+          <div className="p-6 bg-primary/5 rounded-2xl border border-primary/20">
             <h3 className="font-semibold text-foreground mb-2">Comienza Ahora</h3>
             <p className="text-sm text-muted-foreground mb-4">Publica tu anuncio de forma segura</p>
-            <button className="w-full bg-gradient-to-r from-primary via-primary to-secondary text-primary-foreground font-semibold py-2.5 px-4 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 flex items-center justify-center gap-2">
+            <button className="w-full bg-primary text-primary-foreground font-semibold py-2.5 px-4 rounded-lg transition-all duration-300 hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/20 flex items-center justify-center gap-2">
               <Upload className="w-4 h-4" />
               PUBLICAR ANUNCIO
             </button>

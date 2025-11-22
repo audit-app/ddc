@@ -189,7 +189,7 @@ export default function AnuncioDetailClient({ anuncio }: { anuncio: Anuncio }) {
                   priority
                 />
               ) : (
-                <div className="flex h-full items-center justify-center bg-gradient-to-br from-primary/10 to-secondary/10">
+                <div className="flex h-full items-center justify-center bg-primary/5">
                   <Camera className="w-16 h-16 text-muted-foreground/50" />
                 </div>
               )}
@@ -369,7 +369,7 @@ export default function AnuncioDetailClient({ anuncio }: { anuncio: Anuncio }) {
 
               {/* Price card */}
               {anuncio.precio && (
-                <div className="bg-gradient-to-br from-primary/20 to-secondary/20 backdrop-blur-sm rounded-2xl p-6 border border-primary/20">
+                <div className="bg-primary/10 backdrop-blur-sm rounded-2xl p-6 border border-primary/20">
                   <p className="text-sm text-muted-foreground mb-1">Precio</p>
                   <p className="text-3xl font-bold text-primary">
                     {formatCurrency(anuncio.precio)}

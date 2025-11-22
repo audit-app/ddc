@@ -13,7 +13,6 @@ const categories = [
       "Encuentros con mujeres verificadas. Acompañantes, masajes y servicios personalizados con total discreción.",
     image: "https://bo.skokka.com/static/assets/womenseekmen_repr.09bc5c7b4ed7201892f6.jpg",
     icon: Heart,
-    gradient: "from-pink-500/20 via-primary/20 to-rose-500/20",
     stats: "500+ anuncios",
     locations: [
       { city: "La Paz", count: 180 },
@@ -29,7 +28,6 @@ const categories = [
       "Anuncios de trans y travestis en Bolivia. Compañía auténtica con perfiles verificados y contacto seguro.",
     image: "/images/category-trans.jpg",
     icon: Sparkles,
-    gradient: "from-purple-500/20 via-secondary/20 to-violet-500/20",
     stats: "150+ anuncios",
     locations: [
       { city: "Santa Cruz", count: 65 },
@@ -44,7 +42,6 @@ const categories = [
     description: "Servicios masculinos para encuentros discretos. Gigolos y acompañantes profesionales en tu zona.",
     image: "/images/category-hombres.jpg",
     icon: User,
-    gradient: "from-blue-500/20 via-primary/20 to-cyan-500/20",
     stats: "80+ anuncios",
     locations: [
       { city: "La Paz", count: 35 },
@@ -59,7 +56,6 @@ const categories = [
     description: "Parejas liberales y swingers. Encuentros únicos y experiencias compartidas en un ambiente seguro.",
     image: "/images/category-parejas.jpg",
     icon: Users,
-    gradient: "from-amber-500/20 via-orange-500/20 to-primary/20",
     stats: "60+ anuncios",
     locations: [
       { city: "Santa Cruz", count: 25 },
@@ -86,9 +82,7 @@ export default function CategoryCards() {
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4 text-balance">
             Encuentros discretos en{" "}
-            <span className="bg-gradient-to-r from-primary via-primary to-secondary bg-clip-text text-transparent">
-              tu ciudad
-            </span>
+            <span className="text-primary">tu ciudad</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Plataforma segura y elegante para conectar de forma privada
@@ -104,7 +98,7 @@ export default function CategoryCards() {
                 className="group relative rounded-3xl overflow-hidden transition-all duration-500 hover:scale-[1.02]"
               >
                 {/* Glow effect on hover */}
-                <div className="absolute -inset-1 bg-gradient-to-r from-primary via-secondary to-primary rounded-3xl opacity-0 group-hover:opacity-30 blur-xl transition-opacity duration-500" />
+                <div className="absolute -inset-1 bg-primary rounded-3xl opacity-0 group-hover:opacity-25 blur-xl transition-opacity duration-500" />
 
                 {/* Card container */}
                 <div className="relative bg-card/90 backdrop-blur-xl border border-white/10 shadow-2xl shadow-primary/5 rounded-3xl overflow-hidden">
@@ -119,9 +113,8 @@ export default function CategoryCards() {
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
                       loading="lazy"
                     />
-                    {/* Gradient overlay on image */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-card via-card/60 to-transparent" />
-                    <div className={`absolute inset-0 bg-gradient-to-br ${category.gradient} opacity-40 mix-blend-overlay`} />
+                    {/* Overlay for text readability */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent" />
 
                     {/* Stats badge on image */}
                     <div className="absolute top-4 right-4 px-3 py-1.5 rounded-full bg-background/80 backdrop-blur-xl border border-white/20 shadow-lg">
@@ -175,14 +168,11 @@ export default function CategoryCards() {
                     {/* CTA button */}
                     <Link
                       href={`/anuncios?categoria=${category.slug}`}
-                      className="relative w-full block group/btn overflow-hidden rounded-xl bg-gradient-to-r from-primary via-primary to-secondary p-[1px] transition-all duration-300 hover:shadow-xl hover:shadow-primary/30"
+                      className="w-full block rounded-xl bg-primary px-6 py-3.5 text-center transition-all duration-300 hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/30"
                     >
-                      <div className="relative bg-gradient-to-r from-primary via-primary to-secondary rounded-xl px-6 py-3.5 text-center">
-                        <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover/btn:translate-x-[100%] transition-transform duration-700" />
-                        <span className="relative text-sm font-bold text-primary-foreground tracking-wide">
-                          Ver todos en {category.name}
-                        </span>
-                      </div>
+                      <span className="text-sm font-bold text-primary-foreground tracking-wide">
+                        Ver todos en {category.name}
+                      </span>
                     </Link>
                   </div>
                 </div>

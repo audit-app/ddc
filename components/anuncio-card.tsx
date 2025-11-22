@@ -34,7 +34,7 @@ export default function AnuncioCard({ anuncio, onOpen }: AnuncioCardProps) {
             )}
           </>
         ) : (
-          <div className="flex h-full items-center justify-center bg-gradient-to-br from-primary/10 to-secondary/10">
+          <div className="flex h-full items-center justify-center bg-primary/5">
             <span className="text-muted-foreground text-sm">Sin imagen</span>
           </div>
         )}
@@ -74,7 +74,7 @@ export default function AnuncioCard({ anuncio, onOpen }: AnuncioCardProps) {
             e.stopPropagation()
             onOpen(anuncio)
           }}
-          className="w-full bg-gradient-to-r from-primary via-primary to-secondary hover:shadow-lg hover:shadow-primary/20 transition-all duration-300 font-semibold"
+          className="w-full bg-primary hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/20 transition-all duration-300 font-semibold"
         >
           Ver Detalle
         </Button>

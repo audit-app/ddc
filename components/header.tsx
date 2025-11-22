@@ -10,11 +10,11 @@ export default function Header() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2" aria-label="Ir al inicio - Damas de Compañía Bolivia">
-            <div className="w-9 h-9 bg-gradient-to-br from-primary via-primary to-secondary rounded-xl flex items-center justify-center shadow-md">
+            <div className="w-9 h-9 bg-primary rounded-xl flex items-center justify-center shadow-md">
               <Heart className="w-5 h-5 text-primary-foreground" fill="currentColor" aria-hidden="true" />
             </div>
             <div className="flex flex-col">
-              <span className="text-xl font-bold bg-gradient-to-r from-primary via-primary to-secondary bg-clip-text text-transparent">
+              <span className="text-xl font-bold text-primary">
                 Damas de Compañía
               </span>
               <span className="text-[10px] text-muted-foreground -mt-1">Bolivia</span>
@@ -32,7 +32,7 @@ export default function Header() {
             </button>
             <Link
               href="/publicar"
-              className="bg-gradient-to-r from-primary via-primary to-secondary text-primary-foreground px-4 sm:px-5 py-2 rounded-lg font-semibold text-sm shadow-md hover:shadow-lg transition-shadow flex items-center gap-2"
+              className="bg-primary text-primary-foreground px-4 sm:px-5 py-2 rounded-lg font-semibold text-sm shadow-md hover:bg-primary/90 hover:shadow-lg transition-all flex items-center gap-2"
             >
               <Plus className="w-4 h-4" aria-hidden="true" />
               <span className="hidden sm:inline">Publicar</span>

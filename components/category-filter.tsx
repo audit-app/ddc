@@ -34,10 +34,10 @@ export default function CategoryFilter({ category = "Viajeras" }: CategoryFilter
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-12">
           <div className="flex items-center gap-3 mb-3">
-            <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center shadow-md">
+            <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center shadow-md">
               <MapPin className="w-5 h-5 text-primary-foreground" />
             </div>
-            <h2 className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-primary via-primary to-secondary bg-clip-text text-transparent">
+            <h2 className="text-3xl sm:text-4xl font-bold text-primary">
               {category}
             </h2>
           </div>

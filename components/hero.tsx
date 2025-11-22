@@ -38,9 +38,7 @@ export default function Hero() {
 
             <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-foreground mb-8 text-balance leading-[1.1] tracking-tight">
               Encuentra Compañía en{" "}
-              <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
-                Bolivia
-              </span>
+              <span className="text-primary">Bolivia</span>
             </h1>
 
             <p className="text-xl sm:text-2xl text-muted-foreground mb-4 text-balance max-w-3xl mx-auto font-medium">
@@ -58,7 +56,7 @@ export default function Hero() {
               aria-label="Abrir búsqueda avanzada"
               className="relative w-full px-6 py-5 bg-card/60 backdrop-blur-xl rounded-2xl shadow-2xl border border-white/10 hover:border-primary/40 hover:bg-card/80 transition-colors duration-200 flex items-center gap-4 group"
             >
-              <div className="p-3 bg-gradient-to-br from-primary/20 to-secondary/20 backdrop-blur-xl rounded-xl border border-white/20">
+              <div className="p-3 bg-primary/15 backdrop-blur-xl rounded-xl border border-primary/20">
                 <Search className="w-5 h-5 text-primary" aria-hidden="true" />
               </div>
               <span className="text-base sm:text-lg text-muted-foreground group-hover:text-foreground transition-colors text-left font-medium">

@@ -13,14 +13,12 @@ export default function Home() {
       <Hero />
       <CategoryCards />
 
-      <section className="py-16 sm:py-20 bg-gradient-to-b from-background via-muted/10 to-background">
+      <section className="py-16 sm:py-20 bg-muted/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4 text-balance">
               Explora Anuncios por{" "}
-              <span className="bg-gradient-to-r from-primary via-primary to-secondary bg-clip-text text-transparent">
-                Categoría
-              </span>
+              <span className="text-primary">Categoría</span>
             </h2>
             <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
               Encuentra exactamente lo que buscas en tu ciudad

@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { X, Search, ChevronDown, Sparkles, MapPin, SlidersHorizontal } from "lucide-react"
-import { Dialog, DialogContent } from "@/components/ui/dialog"
+import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog"
 
 interface SearchModalProps {
   isOpen: boolean
@@ -68,11 +68,11 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
         showCloseButton={false}
         className="!max-w-4xl sm:!max-w-4xl w-[95vw] p-0 bg-card/95 backdrop-blur-2xl border border-white/10 shadow-2xl shadow-primary/10 rounded-3xl overflow-hidden"
       >
+        <DialogTitle className="sr-only">Búsqueda avanzada</DialogTitle>
         {/* Header */}
-        <div className="relative flex items-center justify-between p-6 border-b border-white/10">
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-transparent to-secondary/10" />
+        <div className="relative flex items-center justify-between p-6 border-b border-white/10 bg-primary/5">
           <div className="relative flex items-center gap-3">
-            <div className="p-2.5 bg-gradient-to-br from-primary/20 to-secondary/20 backdrop-blur-xl rounded-xl border border-white/20">
+            <div className="p-2.5 bg-primary/15 backdrop-blur-xl rounded-xl border border-primary/20">
               <Search className="w-5 h-5 text-primary" />
             </div>
             <div>
@@ -93,7 +93,6 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
 
           {/* Search Input */}
           <div className="relative group">
-            <div className="absolute -inset-0.5 bg-gradient-to-r from-primary via-secondary to-primary rounded-2xl opacity-0 group-focus-within:opacity-30 blur transition-opacity duration-300" />
             <div className="relative flex items-center bg-background/50 backdrop-blur-sm border border-white/10 rounded-xl overflow-hidden group-focus-within:border-primary/50 transition-colors">
               <div className="pl-4">
                 <Search className="w-5 h-5 text-muted-foreground" />
@@ -231,7 +230,7 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
                             onClick={() => handleFilterToggle(filter.id, option)}
                             className={`px-4 py-2 rounded-full font-medium text-sm transition-all duration-300 ${
                               isSelected
-                                ? "bg-gradient-to-r from-primary to-secondary text-primary-foreground shadow-lg shadow-primary/20"
+                                ? "bg-primary text-primary-foreground shadow-lg shadow-primary/20"
                                 : "bg-background/50 text-foreground/80 border border-white/10 hover:border-primary/50 hover:text-primary"
                             }`}
                           >
@@ -248,21 +247,17 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
         </div>
 
         {/* Footer */}
-        <div className="relative p-5 border-t border-white/10">
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-secondary/5" />
-          <div className="relative flex gap-3">
+        <div className="relative p-5 border-t border-white/10 bg-primary/5">
+          <div className="flex gap-3">
             <button
               onClick={handleClearAll}
               className="flex-1 px-6 py-3.5 text-muted-foreground hover:text-foreground font-semibold rounded-xl border border-white/10 hover:border-white/20 hover:bg-white/5 transition-all duration-300"
             >
               Limpiar todo
             </button>
-            <button className="flex-1 relative group overflow-hidden rounded-xl bg-gradient-to-r from-primary via-primary to-secondary p-[1px] transition-all duration-300 hover:shadow-xl hover:shadow-primary/30">
-              <div className="relative bg-gradient-to-r from-primary via-primary to-secondary rounded-xl px-6 py-3.5 flex items-center justify-center gap-2">
-                <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
-                <Search className="w-5 h-5 text-primary-foreground relative" />
-                <span className="font-bold text-primary-foreground relative">Buscar</span>
-              </div>
+            <button className="flex-1 bg-primary hover:bg-primary/90 rounded-xl px-6 py-3.5 flex items-center justify-center gap-2 transition-all duration-300 hover:shadow-xl hover:shadow-primary/30">
+              <Search className="w-5 h-5 text-primary-foreground" />
+              <span className="font-bold text-primary-foreground">Buscar</span>
             </button>
           </div>
         </div>
