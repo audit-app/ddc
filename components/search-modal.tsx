@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import { useRouter } from "next/navigation"
 import { X, Search, ChevronDown, Sparkles, MapPin, SlidersHorizontal } from "lucide-react"
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog"
 
@@ -10,14 +11,15 @@ interface SearchModalProps {
 }
 
 export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
-  const [selectedCategory, setSelectedCategory] = useState("Mujeres")
-  const [selectedCity, setSelectedCity] = useState("Todas las ciudades")
+  const router = useRouter()
+  const [selectedCategory, setSelectedCategory] = useState("")
+  const [selectedCity, setSelectedCity] = useState("")
   const [searchText, setSearchText] = useState("")
   const [expandedFilter, setExpandedFilter] = useState<string | null>(null)
   const [selectedFilters, setSelectedFilters] = useState<Record<string, string[]>>({})
 
   const categories = ["Mujeres", "Trans", "Hombres", "Parejas", "Masajes"]
-  const cities = ["Todas las ciudades", "La Paz", "Santa Cruz", "Cochabamba", "El Alto", "Oruro", "Sucre", "Potosí"]
+  const cities = ["La Paz", "Santa Cruz", "Cochabamba", "El Alto", "Oruro", "Sucre", "Potosí"]
 
   const filters = [
     {
@@ -44,10 +46,35 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
 
   const handleClearAll = () => {
     setSearchText("")
-    setSelectedCategory("Mujeres")
-    setSelectedCity("Todas las ciudades")
+    setSelectedCategory("")
+    setSelectedCity("")
     setExpandedFilter(null)
     setSelectedFilters({})
+  }
+
+  const handleSearch = () => {
+    const params = new URLSearchParams()
+
+    if (searchText.trim()) {
+      params.set("q", searchText.trim())
+    }
+    if (selectedCity) {
+      params.set("ciudad", selectedCity)
+    }
+    if (selectedCategory) {
+      params.set("categoria", selectedCategory.toLowerCase())
+    }
+
+    // Add selected filters
+    Object.entries(selectedFilters).forEach(([key, values]) => {
+      if (values.length > 0) {
+        params.set(key, values.join(","))
+      }
+    })
+
+    const queryString = params.toString()
+    router.push(`/anuncios${queryString ? `?${queryString}` : ""}`)
+    onClose()
   }
 
   const handleFilterToggle = (filterId: string, option: string) => {
@@ -129,6 +156,7 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
                   onChange={(e) => setSelectedCategory(e.target.value)}
                   className="w-full px-4 py-3.5 bg-background/50 backdrop-blur-sm border border-white/10 rounded-xl text-foreground focus:outline-none focus:border-primary/50 appearance-none cursor-pointer font-medium transition-colors hover:border-primary/30"
                 >
+                  <option value="" className="bg-card text-foreground">Todas las categorías</option>
                   {categories.map((cat) => (
                     <option key={cat} value={cat} className="bg-card text-foreground">
                       {cat}
@@ -151,6 +179,7 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
                   onChange={(e) => setSelectedCity(e.target.value)}
                   className="w-full px-4 py-3.5 bg-background/50 backdrop-blur-sm border border-white/10 rounded-xl text-foreground focus:outline-none focus:border-primary/50 appearance-none cursor-pointer font-medium transition-colors hover:border-primary/30"
                 >
+                  <option value="" className="bg-card text-foreground">Todas las ciudades</option>
                   {cities.map((city) => (
                     <option key={city} value={city} className="bg-card text-foreground">
                       {city}
@@ -255,7 +284,10 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
             >
               Limpiar todo
             </button>
-            <button className="flex-1 bg-primary hover:bg-primary/90 rounded-xl px-6 py-3.5 flex items-center justify-center gap-2 transition-all duration-300 hover:shadow-xl hover:shadow-primary/30">
+            <button
+              onClick={handleSearch}
+              className="flex-1 bg-primary hover:bg-primary/90 rounded-xl px-6 py-3.5 flex items-center justify-center gap-2 transition-all duration-300 hover:shadow-xl hover:shadow-primary/30"
+            >
               <Search className="w-5 h-5 text-primary-foreground" />
               <span className="font-bold text-primary-foreground">Buscar</span>
             </button>

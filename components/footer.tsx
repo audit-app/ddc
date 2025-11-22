@@ -1,7 +1,8 @@
 "use client"
 
 import Link from "next/link"
-import { Mail, Phone, Shield, Sparkles, Heart, ArrowUp } from "lucide-react"
+import { Mail, Phone, Shield, Sparkles, ArrowUp } from "lucide-react"
+import { HeelIcon } from "./icons/heel-icon"
 
 export default function Footer() {
   return (
@@ -13,7 +14,7 @@ export default function Footer() {
           <div className="lg:col-span-4">
             <Link href="/" className="inline-flex items-center gap-3 mb-5 group">
               <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center shadow-lg shadow-primary/20">
-                <Heart className="w-5 h-5 text-primary-foreground" fill="currentColor" />
+                <HeelIcon className="w-5 h-5 text-primary-foreground" fill />
               </div>
               <div>
                 <span className="text-lg font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">

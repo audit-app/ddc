@@ -1,30 +1,64 @@
 "use client"
 
-import { useState, useMemo } from "react"
+import { useState, useMemo, useEffect } from "react"
+import { useSearchParams } from "next/navigation"
 import Link from "next/link"
 import Image from "next/image"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import SearchModal from "@/components/search-modal"
 import { anunciosData } from "@/lib/anuncios-data"
-import { Search, MapPin, Filter, ChevronDown, Sparkles, CheckCircle2, Camera, MessageCircle, Eye, ChevronLeft, ChevronRight } from "lucide-react"
+import { Search, MapPin, Filter, ChevronDown, Sparkles, CheckCircle2, Camera, MessageCircle, Eye, ChevronLeft, ChevronRight, X } from "lucide-react"
 
 const ITEMS_PER_PAGE = 10
 
 export default function AnunciosClientPage() {
+  const searchParams = useSearchParams()
   const [isSearchModalOpen, setIsSearchModalOpen] = useState(false)
   const [selectedCity, setSelectedCity] = useState("")
+  const [searchQuery, setSearchQuery] = useState("")
   const [showFilters, setShowFilters] = useState(false)
   const [currentPage, setCurrentPage] = useState(1)
+
+  // Read URL params on mount and when they change
+  useEffect(() => {
+    const ciudad = searchParams.get("ciudad")
+    const q = searchParams.get("q")
+
+    if (ciudad) setSelectedCity(ciudad)
+    if (q) setSearchQuery(q)
+  }, [searchParams])
 
   const cities = Array.from(new Set(anunciosData.map((a) => a.city)))
 
   const filteredAnuncios = useMemo(() => {
     return anunciosData.filter((anuncio) => {
       const matchesCity = !selectedCity || anuncio.city === selectedCity
-      return matchesCity
+
+      // Search in title, description, city
+      const matchesSearch = !searchQuery ||
+        anuncio.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        anuncio.anuncio.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        anuncio.city.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        (anuncio.servicios && anuncio.servicios.some(s => s.toLowerCase().includes(searchQuery.toLowerCase())))
+
+      return matchesCity && matchesSearch
     })
-  }, [selectedCity])
+  }, [selectedCity, searchQuery])
+
+  const clearSearch = () => {
+    setSearchQuery("")
+    // Update URL without the q param
+    const url = new URL(window.location.href)
+    url.searchParams.delete("q")
+    window.history.replaceState({}, "", url.toString())
+  }
+
+  const clearAllFilters = () => {
+    setSelectedCity("")
+    setSearchQuery("")
+    window.history.replaceState({}, "", "/anuncios")
+  }
 
   // Calculate pagination
   const totalPages = Math.ceil(filteredAnuncios.length / ITEMS_PER_PAGE)
@@ -100,7 +134,7 @@ export default function AnunciosClientPage() {
           </div>
 
           {/* Filters */}
-          <div className={`${showFilters ? "block" : "hidden"} sm:block`}>
+          <div className={`${showFilters ? "block" : "hidden"} sm:block space-y-4`}>
             <div className="flex flex-col sm:flex-row gap-4 p-4 bg-card/60 backdrop-blur-xl rounded-2xl border border-white/10">
               {/* Search */}
               <button
@@ -134,6 +168,37 @@ export default function AnunciosClientPage() {
                 <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground pointer-events-none" />
               </div>
             </div>
+
+            {/* Active filters */}
+            {(searchQuery || selectedCity) && (
+              <div className="flex items-center gap-2 flex-wrap">
+                <span className="text-sm text-muted-foreground">Filtros activos:</span>
+                {searchQuery && (
+                  <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-primary/10 border border-primary/30 rounded-full text-sm font-medium text-primary">
+                    <Search className="w-3 h-3" />
+                    "{searchQuery}"
+                    <button onClick={clearSearch} className="hover:text-primary/70 transition-colors">
+                      <X className="w-3.5 h-3.5" />
+                    </button>
+                  </div>
+                )}
+                {selectedCity && (
+                  <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-primary/10 border border-primary/30 rounded-full text-sm font-medium text-primary">
+                    <MapPin className="w-3 h-3" />
+                    {selectedCity}
+                    <button onClick={() => handleCityChange("")} className="hover:text-primary/70 transition-colors">
+                      <X className="w-3.5 h-3.5" />
+                    </button>
+                  </div>
+                )}
+                <button
+                  onClick={clearAllFilters}
+                  className="text-xs text-muted-foreground hover:text-primary font-medium transition-colors px-2"
+                >
+                  Limpiar todo
+                </button>
+              </div>
+            )}
           </div>
         </div>
       </section>

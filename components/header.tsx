@@ -1,7 +1,8 @@
 "use client"
-import { User, Plus, Heart, Sparkles } from "lucide-react"
+import { User, Plus, Sparkles } from "lucide-react"
 import { ThemeToggle } from "./theme-toggle"
 import Link from "next/link"
+import { HeelIcon } from "./icons/heel-icon"
 
 export default function Header() {
   return (
@@ -16,7 +17,7 @@ export default function Header() {
             <div className="relative">
               <div className="absolute inset-0 bg-primary/30 rounded-xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="relative w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center shadow-lg shadow-primary/20">
-                <Heart className="w-5 h-5 text-primary-foreground" fill="currentColor" aria-hidden="true" />
+                <HeelIcon className="w-5 h-5 text-primary-foreground" fill aria-hidden="true" />
               </div>
             </div>
             <div className="flex flex-col">
